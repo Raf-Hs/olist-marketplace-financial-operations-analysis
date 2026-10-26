@@ -1,0 +1,83 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "cardTop10",
+  "position": {
+    "x": 420,
+    "y": 95,
+    "z": 11,
+    "height": 95,
+    "width": 380,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimSeller"
+                    }
+                  },
+                  "Property": "Top 10 Sellers GMV %"
+                }
+              },
+              "Property": "Top 10 Sellers GMV %",
+              "Name": "DimSeller.Top 10 Sellers GMV %"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "DimSeller.Top 10 Sellers GMV %"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Share of GMV from the ten largest sellers'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F3B57'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

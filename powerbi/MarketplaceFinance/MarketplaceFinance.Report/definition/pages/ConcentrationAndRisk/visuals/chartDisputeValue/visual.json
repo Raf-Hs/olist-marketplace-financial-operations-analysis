@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartDisputeValue",
+  "position": {
+    "x": 820,
+    "y": 555,
+    "z": 17,
+    "height": 290,
+    "width": 760,
+    "tabOrder": 17
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Disputed Value"
+                }
+              },
+              "Property": "Disputed Value",
+              "Name": "FactOrder.Disputed Value"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "StatusClass"
+                }
+              },
+              "Property": "StatusClass",
+              "Name": "FactOrder.StatusClass"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Disputed Value"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "FactOrder.StatusClass"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Disputed value at risk by order status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

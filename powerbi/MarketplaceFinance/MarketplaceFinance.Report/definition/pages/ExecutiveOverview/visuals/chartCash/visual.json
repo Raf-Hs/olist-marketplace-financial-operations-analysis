@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartCash",
+  "position": {
+    "x": 20,
+    "y": 205,
+    "z": 10,
+    "height": 330,
+    "width": 780,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Cash Collected"
+                }
+              },
+              "Property": "Cash Collected",
+              "Name": "FactOrder.Cash Collected"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDate"
+                    }
+                  },
+                  "Property": "month_start"
+                }
+              },
+              "Property": "month_start",
+              "Name": "DimDate.month_start"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Cash Collected"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "DimDate.month_start"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cash collected by month'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

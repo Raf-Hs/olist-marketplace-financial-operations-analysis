@@ -1,0 +1,1061 @@
+{
+  "name": "MarketplaceFinance",
+  "compatibilityLevel": 1500,
+  "model": {
+    "culture": "en-GB",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[]"
+      }
+    ],
+    "tables": [
+      {
+        "name": "FactOrder",
+        "dataCategory": "Fact",
+        "columns": [
+          {
+            "name": "OrderKey",
+            "dataType": "string",
+            "sourceColumn": "OrderKey",
+            "isKey": true,
+            "isHidden": true
+          },
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "sourceColumn": "DateKey",
+            "isHidden": true
+          },
+          {
+            "name": "CustomerKey",
+            "dataType": "string",
+            "sourceColumn": "CustomerKey",
+            "isHidden": true
+          },
+          {
+            "name": "PaymentMethodKey",
+            "dataType": "string",
+            "sourceColumn": "PaymentMethodKey",
+            "isHidden": true
+          },
+          {
+            "name": "OrderStatus",
+            "dataType": "string",
+            "sourceColumn": "OrderStatus"
+          },
+          {
+            "name": "StatusClass",
+            "dataType": "string",
+            "sourceColumn": "StatusClass"
+          },
+          {
+            "name": "PurchaseMonth",
+            "dataType": "string",
+            "sourceColumn": "PurchaseMonth"
+          },
+          {
+            "name": "PurchaseYear",
+            "dataType": "int64",
+            "sourceColumn": "PurchaseYear"
+          },
+          {
+            "name": "PurchaseQuarter",
+            "dataType": "string",
+            "sourceColumn": "PurchaseQuarter"
+          },
+          {
+            "name": "CustomerState",
+            "dataType": "string",
+            "sourceColumn": "CustomerState"
+          },
+          {
+            "name": "LineItemCount",
+            "dataType": "int64",
+            "sourceColumn": "LineItemCount"
+          },
+          {
+            "name": "SellerCount",
+            "dataType": "int64",
+            "sourceColumn": "SellerCount"
+          },
+          {
+            "name": "ProductCount",
+            "dataType": "int64",
+            "sourceColumn": "ProductCount"
+          },
+          {
+            "name": "MerchandiseValue",
+            "dataType": "double",
+            "sourceColumn": "MerchandiseValue"
+          },
+          {
+            "name": "FreightCollected",
+            "dataType": "double",
+            "sourceColumn": "FreightCollected"
+          },
+          {
+            "name": "ExpectedCharge",
+            "dataType": "double",
+            "sourceColumn": "ExpectedCharge"
+          },
+          {
+            "name": "CashCollected",
+            "dataType": "double",
+            "sourceColumn": "CashCollected"
+          },
+          {
+            "name": "ReconDelta",
+            "dataType": "double",
+            "sourceColumn": "ReconDelta"
+          },
+          {
+            "name": "ReconBreak",
+            "dataType": "int64",
+            "sourceColumn": "ReconBreak"
+          },
+          {
+            "name": "PaymentCount",
+            "dataType": "int64",
+            "sourceColumn": "PaymentCount"
+          },
+          {
+            "name": "MaxInstallments",
+            "dataType": "int64",
+            "sourceColumn": "MaxInstallments"
+          },
+          {
+            "name": "InstallmentMonths",
+            "dataType": "int64",
+            "sourceColumn": "InstallmentMonths"
+          },
+          {
+            "name": "RefundExposure",
+            "dataType": "double",
+            "sourceColumn": "RefundExposure"
+          },
+          {
+            "name": "NetRevenue",
+            "dataType": "double",
+            "sourceColumn": "NetRevenue"
+          },
+          {
+            "name": "SettlementFloat",
+            "dataType": "double",
+            "sourceColumn": "SettlementFloat"
+          },
+          {
+            "name": "VoucherValue",
+            "dataType": "double",
+            "sourceColumn": "VoucherValue"
+          },
+          {
+            "name": "CardValue",
+            "dataType": "double",
+            "sourceColumn": "CardValue"
+          },
+          {
+            "name": "BoletoValue",
+            "dataType": "double",
+            "sourceColumn": "BoletoValue"
+          },
+          {
+            "name": "DebitCardValue",
+            "dataType": "double",
+            "sourceColumn": "DebitCardValue"
+          },
+          {
+            "name": "ReviewCount",
+            "dataType": "int64",
+            "sourceColumn": "ReviewCount"
+          },
+          {
+            "name": "WorstReviewScore",
+            "dataType": "int64",
+            "sourceColumn": "WorstReviewScore"
+          },
+          {
+            "name": "DisputedFlag",
+            "dataType": "int64",
+            "sourceColumn": "DisputedFlag"
+          },
+          {
+            "name": "DeliveryDays",
+            "dataType": "double",
+            "sourceColumn": "DeliveryDays"
+          },
+          {
+            "name": "DaysLateVsPromise",
+            "dataType": "double",
+            "sourceColumn": "DaysLateVsPromise"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactOrder",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    DataFolder = #\"Data\",\n    Source = Csv.Document(File.Contents(DataFolder & \"\\\\FactOrder.csv\"),[Delimiter=\",\", Columns=34, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"OrderKey\", type text}, {\"DateKey\", Int64.Type}, {\"CustomerKey\", type text}, {\"PaymentMethodKey\", type text}, {\"OrderStatus\", type text}, {\"StatusClass\", type text}, {\"PurchaseMonth\", type text}, {\"PurchaseYear\", Int64.Type}, {\"PurchaseQuarter\", type text}, {\"CustomerState\", type text}, {\"LineItemCount\", Int64.Type}, {\"SellerCount\", Int64.Type}, {\"ProductCount\", Int64.Type}, {\"MerchandiseValue\", type number}, {\"FreightCollected\", type number}, {\"ExpectedCharge\", type number}, {\"CashCollected\", type number}, {\"ReconDelta\", type number}, {\"ReconBreak\", Int64.Type}, {\"PaymentCount\", Int64.Type}, {\"MaxInstallments\", Int64.Type}, {\"InstallmentMonths\", Int64.Type}, {\"RefundExposure\", type number}, {\"NetRevenue\", type number}, {\"SettlementFloat\", type number}, {\"VoucherValue\", type number}, {\"CardValue\", type number}, {\"BoletoValue\", type number}, {\"DebitCardValue\", type number}, {\"ReviewCount\", Int64.Type}, {\"WorstReviewScore\", Int64.Type}, {\"DisputedFlag\", Int64.Type}, {\"DeliveryDays\", type number}, {\"DaysLateVsPromise\", type number}}),\n    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"OrderKey\", Order.Ascending}})\nin\n    #\"Sorted Rows\""
+            }
+          }
+        ],
+        "annotations": [],
+        "measures": [
+          {
+            "name": "GMV",
+            "expression": "SUM ( FactOrder[MerchandiseValue] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Cash Collected",
+            "expression": "SUM ( FactOrder[CashCollected] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Freight Collected",
+            "expression": "SUM ( FactOrder[FreightCollected] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Expected Charge",
+            "expression": "SUM ( FactOrder[ExpectedCharge] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Refund Exposure",
+            "expression": "SUM ( FactOrder[RefundExposure] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Net Revenue",
+            "expression": "SUM ( FactOrder[NetRevenue] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Settlement Float",
+            "expression": "SUM ( FactOrder[SettlementFloat] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Voucher Credit",
+            "expression": "SUM ( FactOrder[VoucherValue] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Orders",
+            "expression": "COUNTROWS ( FactOrder[OrderKey] )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Customers",
+            "expression": "DISTINCTCOUNT ( FactOrder[CustomerKey] )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Average Order Value",
+            "expression": "DIVIDE ( [Cash Collected], [Orders] )",
+            "formatString": "R$#,##0.00"
+          },
+          {
+            "name": "Cash per Customer",
+            "expression": "DIVIDE ( [Cash Collected], [Customers] )",
+            "formatString": "R$#,##0.00"
+          },
+          {
+            "name": "Revenue vs Expected",
+            "expression": "[Cash Collected] - [Expected Charge]",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Net Revenue % of Cash",
+            "expression": "DIVIDE ( [Net Revenue], [Cash Collected] )",
+            "formatString": "0.00\"%\""
+          },
+          {
+            "name": "Refund Exposure Rate",
+            "expression": "DIVIDE ( [Refund Exposure], [Cash Collected] )",
+            "formatString": "0.00\"%\""
+          },
+          {
+            "name": "Freight Ratio",
+            "expression": "DIVIDE ( [Freight Collected], [GMV] )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Reconciliation Break Orders",
+            "expression": "CALCULATE ( COUNTROWS ( FactOrder[OrderKey] ), FactOrder[ReconBreak] = 1 )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Reconciliation Break Rate",
+            "expression": "DIVIDE ( [Reconciliation Break Orders], [Orders] )",
+            "formatString": "0.00\"%\""
+          },
+          {
+            "name": "Gross Break Value",
+            "expression": "SUMX ( FILTER ( FactOrder, FactOrder[ReconBreak] = 1 ), ABS ( FactOrder[ReconDelta] ) )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Net Break Amount",
+            "expression": "SUMX ( FILTER ( FactOrder, FactOrder[ReconBreak] = 1 ), FactOrder[ReconDelta] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Cash Without Merchandise",
+            "expression": "SUMX ( FILTER ( FactOrder, FactOrder[LineItemCount] = 0 ), FactOrder[CashCollected] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Orders With Reviews",
+            "expression": "CALCULATE ( COUNTROWS ( FactOrder[OrderKey] ), NOT ISBLANK ( FactOrder[WorstReviewScore] ) )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Disputed Orders",
+            "expression": "CALCULATE ( COUNTROWS ( FactOrder[OrderKey] ), FactOrder[DisputedFlag] = 1 )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Dispute Rate",
+            "expression": "DIVIDE ( [Disputed Orders], [Orders With Reviews] )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Disputed Value",
+            "expression": "CALCULATE ( SUM ( FactOrder[CashCollected] ), FactOrder[DisputedFlag] = 1 )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Cash at Risk %",
+            "expression": "DIVIDE ( [Disputed Value], [Cash Collected] )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Repeat Customers",
+            "expression": "CALCULATE ( COUNTROWS ( DimCustomer[CustomerKey] ), DimCustomer[IsRepeat] = 1 )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Repeat Customer Rate",
+            "expression": "DIVIDE ( [Repeat Customers], [Customers] )",
+            "formatString": "0.00\"%\""
+          },
+          {
+            "name": "Orders per Customer",
+            "expression": "DIVIDE ( [Orders], [Customers] )",
+            "formatString": "#,##0.00"
+          },
+          {
+            "name": "Cash MoM %",
+            "expression": "VAR Prev = CALCULATE ( [Cash Collected], DATEADD ( DimDate[full_date], -1, MONTH ) ) RETURN DIVIDE ( [Cash Collected] - Prev, Prev )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Cash YoY %",
+            "expression": "VAR Prev = CALCULATE ( [Cash Collected], SAMEPERIODLASTYEAR ( DimDate[full_date] ) ) RETURN DIVIDE ( [Cash Collected] - Prev, Prev )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Orders YoY %",
+            "expression": "VAR Prev = CALCULATE ( [Orders], SAMEPERIODLASTYEAR ( DimDate[full_date] ) ) RETURN DIVIDE ( [Orders] - Prev, Prev )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "AOV YoY %",
+            "expression": "VAR Prev = CALCULATE ( [Average Order Value], SAMEPERIODLASTYEAR ( DimDate[full_date] ) ) RETURN DIVIDE ( [Average Order Value] - Prev, Prev )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Contribution After Payment Cost",
+            "expression": "[Net Revenue] - [Modelled Total Payment Cost]",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Contribution Margin %",
+            "expression": "DIVIDE ( [Contribution After Payment Cost], [Net Revenue] )",
+            "formatString": "0.0\"%\""
+          }
+        ]
+      },
+      {
+        "name": "FactPayment",
+        "dataCategory": "Fact",
+        "columns": [
+          {
+            "name": "OrderKey",
+            "dataType": "string",
+            "sourceColumn": "OrderKey",
+            "isHidden": true
+          },
+          {
+            "name": "PaymentSequence",
+            "dataType": "int64",
+            "sourceColumn": "PaymentSequence"
+          },
+          {
+            "name": "PaymentMethodKey",
+            "dataType": "string",
+            "sourceColumn": "PaymentMethodKey",
+            "isHidden": true
+          },
+          {
+            "name": "Installments",
+            "dataType": "int64",
+            "sourceColumn": "Installments"
+          },
+          {
+            "name": "PaymentValue",
+            "dataType": "double",
+            "sourceColumn": "PaymentValue"
+          },
+          {
+            "name": "RefundExposure",
+            "dataType": "double",
+            "sourceColumn": "RefundExposure"
+          },
+          {
+            "name": "VoucherValue",
+            "dataType": "double",
+            "sourceColumn": "VoucherValue"
+          },
+          {
+            "name": "InstallmentCreditValue",
+            "dataType": "double",
+            "sourceColumn": "InstallmentCreditValue"
+          },
+          {
+            "name": "StatusClass",
+            "dataType": "string",
+            "sourceColumn": "StatusClass"
+          },
+          {
+            "name": "CustomerState",
+            "dataType": "string",
+            "sourceColumn": "CustomerState"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactPayment",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    DataFolder = #\"Data\",\n    Source = Csv.Document(File.Contents(DataFolder & \"\\\\FactPayment.csv\"),[Delimiter=\",\", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"OrderKey\", type text}, {\"PaymentSequence\", Int64.Type}, {\"PaymentMethodKey\", type text}, {\"Installments\", Int64.Type}, {\"PaymentValue\", type number}, {\"RefundExposure\", type number}, {\"VoucherValue\", type number}, {\"InstallmentCreditValue\", type number}, {\"StatusClass\", type text}, {\"CustomerState\", type text}}),\n    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"OrderKey\", Order.Ascending}})\nin\n    #\"Sorted Rows\""
+            }
+          }
+        ],
+        "annotations": [],
+        "measures": [
+          {
+            "name": "Payment Value",
+            "expression": "SUM ( FactPayment[PaymentValue] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Payment Rows",
+            "expression": "COUNTROWS ( FactPayment[OrderKey] )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Modelled Acquiring Cost",
+            "expression": "SUMX ( FactPayment, FactPayment[PaymentValue] * RELATED ( DimPaymentMethod[RatePct] ) + RELATED ( DimPaymentMethod[FixedFee] ) )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Modelled Installment Funding",
+            "expression": "SUMX ( FactPayment, IF ( FactPayment[PaymentMethodKey] = \"credit_card\", FactPayment[PaymentValue] * RELATED ( DimPaymentMethod[FundingRatePerInstallment] ) * ( FactPayment[Installments] - 1 ), 0 ) )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Modelled Total Payment Cost",
+            "expression": "[Modelled Acquiring Cost] + [Modelled Installment Funding]",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Value Weighted Average Installments",
+            "expression": "DIVIDE ( SUMX ( FactPayment, FactPayment[Installments] * FactPayment[PaymentValue] ), [Payment Value] )",
+            "formatString": "#,##0.00"
+          },
+          {
+            "name": "Installment Funded Value",
+            "expression": "SUM ( FactPayment[InstallmentCreditValue] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Voucher Credit (payments)",
+            "expression": "SUM ( FactPayment[VoucherValue] )",
+            "formatString": "R$#,##0"
+          }
+        ]
+      },
+      {
+        "name": "FactOrderItem",
+        "dataCategory": "Fact",
+        "columns": [
+          {
+            "name": "OrderKey",
+            "dataType": "string",
+            "sourceColumn": "OrderKey",
+            "isHidden": true
+          },
+          {
+            "name": "OrderItemKey",
+            "dataType": "int64",
+            "sourceColumn": "OrderItemKey",
+            "isKey": true,
+            "isHidden": true
+          },
+          {
+            "name": "ProductKey",
+            "dataType": "string",
+            "sourceColumn": "ProductKey",
+            "isHidden": true
+          },
+          {
+            "name": "SellerKey",
+            "dataType": "string",
+            "sourceColumn": "SellerKey",
+            "isHidden": true
+          },
+          {
+            "name": "Price",
+            "dataType": "double",
+            "sourceColumn": "Price"
+          },
+          {
+            "name": "FreightValue",
+            "dataType": "double",
+            "sourceColumn": "FreightValue"
+          },
+          {
+            "name": "LineCharge",
+            "dataType": "double",
+            "sourceColumn": "LineCharge"
+          },
+          {
+            "name": "FreightOverPrice",
+            "dataType": "int64",
+            "sourceColumn": "FreightOverPrice"
+          },
+          {
+            "name": "LargeLine",
+            "dataType": "int64",
+            "sourceColumn": "LargeLine"
+          },
+          {
+            "name": "ProductWeightG",
+            "dataType": "double",
+            "sourceColumn": "ProductWeightG"
+          },
+          {
+            "name": "SellerState",
+            "dataType": "string",
+            "sourceColumn": "SellerState"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactOrderItem",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    DataFolder = #\"Data\",\n    Source = Csv.Document(File.Contents(DataFolder & \"\\\\FactOrderItem.csv\"),[Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"OrderKey\", type text}, {\"OrderItemKey\", Int64.Type}, {\"ProductKey\", type text}, {\"SellerKey\", type text}, {\"Price\", type number}, {\"FreightValue\", type number}, {\"LineCharge\", type number}, {\"FreightOverPrice\", Int64.Type}, {\"LargeLine\", Int64.Type}, {\"ProductWeightG\", type number}, {\"SellerState\", type text}}),\n    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"OrderItemKey\", Order.Ascending}})\nin\n    #\"Sorted Rows\""
+            }
+          }
+        ],
+        "annotations": [],
+        "measures": [
+          {
+            "name": "Line Items",
+            "expression": "COUNTROWS ( FactOrderItem[OrderItemKey] )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Merchandise Value",
+            "expression": "SUM ( FactOrderItem[Price] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Freight on Items",
+            "expression": "SUM ( FactOrderItem[FreightValue] )",
+            "formatString": "R$#,##0"
+          },
+          {
+            "name": "Freight Intensity %",
+            "expression": "DIVIDE ( [Freight on Items], [Merchandise Value] )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Items Freight Exceeds Price",
+            "expression": "CALCULATE ( COUNTROWS ( FactOrderItem[OrderItemKey] ), FactOrderItem[FreightOverPrice] = 1 )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Items Freight Exceeds Price %",
+            "expression": "DIVIDE ( [Items Freight Exceeds Price], [Line Items] )",
+            "formatString": "0.0\"%\""
+          }
+        ]
+      },
+      {
+        "name": "DimDate",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "sourceColumn": "DateKey",
+            "isKey": true
+          },
+          {
+            "name": "full_date",
+            "dataType": "dateTime",
+            "sourceColumn": "full_date"
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year"
+          },
+          {
+            "name": "MonthNumber",
+            "dataType": "int64",
+            "sourceColumn": "MonthNumber"
+          },
+          {
+            "name": "quarter_key",
+            "dataType": "string",
+            "sourceColumn": "quarter_key"
+          },
+          {
+            "name": "month_start",
+            "dataType": "dateTime",
+            "sourceColumn": "month_start"
+          },
+          {
+            "name": "day_of_week",
+            "dataType": "int64",
+            "sourceColumn": "day_of_week"
+          },
+          {
+            "name": "is_weekend",
+            "dataType": "int64",
+            "sourceColumn": "is_weekend"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimDate",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    DataFolder = #\"Data\",\n    Source = Csv.Document(File.Contents(DataFolder & \"\\\\DimDate.csv\"),[Delimiter=\",\", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"DateKey\", Int64.Type}, {\"full_date\", type date}, {\"year\", Int64.Type}, {\"MonthNumber\", Int64.Type}, {\"quarter_key\", type text}, {\"month_start\", type date}, {\"day_of_week\", Int64.Type}, {\"is_weekend\", Int64.Type}}),\n    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"DateKey\", Order.Ascending}})\nin\n    #\"Sorted Rows\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_TimeTableEnabled",
+            "value": "true"
+          }
+        ],
+        "measures": []
+      },
+      {
+        "name": "DimCustomer",
+        "dataCategory": "Dimension",
+        "columns": [
+          {
+            "name": "CustomerKey",
+            "dataType": "string",
+            "sourceColumn": "CustomerKey",
+            "isKey": true
+          },
+          {
+            "name": "CustomerState",
+            "dataType": "string",
+            "sourceColumn": "CustomerState"
+          },
+          {
+            "name": "ZipCodePrefix",
+            "dataType": "int64",
+            "sourceColumn": "ZipCodePrefix"
+          },
+          {
+            "name": "OrderCount",
+            "dataType": "int64",
+            "sourceColumn": "OrderCount"
+          },
+          {
+            "name": "CashCollected",
+            "dataType": "double",
+            "sourceColumn": "CashCollected"
+          },
+          {
+            "name": "CustomerGMV",
+            "dataType": "double",
+            "sourceColumn": "CustomerGMV"
+          },
+          {
+            "name": "RefundExposure",
+            "dataType": "double",
+            "sourceColumn": "RefundExposure"
+          },
+          {
+            "name": "DisputedOrders",
+            "dataType": "int64",
+            "sourceColumn": "DisputedOrders"
+          },
+          {
+            "name": "FirstPurchaseDate",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstPurchaseDate"
+          },
+          {
+            "name": "LastPurchaseDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastPurchaseDate"
+          },
+          {
+            "name": "AverageOrderValue",
+            "dataType": "double",
+            "sourceColumn": "AverageOrderValue"
+          },
+          {
+            "name": "IsRepeat",
+            "dataType": "int64",
+            "sourceColumn": "IsRepeat"
+          },
+          {
+            "name": "SettlementFloat",
+            "dataType": "double",
+            "sourceColumn": "SettlementFloat"
+          },
+          {
+            "name": "InstallmentMonths",
+            "dataType": "int64",
+            "sourceColumn": "InstallmentMonths"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimCustomer",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    DataFolder = #\"Data\",\n    Source = Csv.Document(File.Contents(DataFolder & \"\\\\DimCustomer.csv\"),[Delimiter=\",\", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"CustomerKey\", type text}, {\"CustomerState\", type text}, {\"ZipCodePrefix\", Int64.Type}, {\"OrderCount\", Int64.Type}, {\"CashCollected\", type number}, {\"CustomerGMV\", type number}, {\"RefundExposure\", type number}, {\"DisputedOrders\", Int64.Type}, {\"FirstPurchaseDate\", type date}, {\"LastPurchaseDate\", type date}, {\"AverageOrderValue\", type number}, {\"IsRepeat\", Int64.Type}, {\"SettlementFloat\", type number}, {\"InstallmentMonths\", Int64.Type}}),\n    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"CustomerKey\", Order.Ascending}})\nin\n    #\"Sorted Rows\""
+            }
+          }
+        ],
+        "annotations": [],
+        "measures": [
+          {
+            "name": "Customers (dimension)",
+            "expression": "COUNTROWS ( DimCustomer[CustomerKey] )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Repeat Customers (dimension)",
+            "expression": "CALCULATE ( COUNTROWS ( DimCustomer[CustomerKey] ), DimCustomer[IsRepeat] = 1 )",
+            "formatString": "#,##0"
+          }
+        ]
+      },
+      {
+        "name": "DimSeller",
+        "dataCategory": "Dimension",
+        "columns": [
+          {
+            "name": "SellerKey",
+            "dataType": "string",
+            "sourceColumn": "SellerKey",
+            "isKey": true
+          },
+          {
+            "name": "SellerState",
+            "dataType": "string",
+            "sourceColumn": "SellerState"
+          },
+          {
+            "name": "SellerCity",
+            "dataType": "string",
+            "sourceColumn": "SellerCity"
+          },
+          {
+            "name": "GMVRank",
+            "dataType": "int64",
+            "sourceColumn": "GMVRank"
+          },
+          {
+            "name": "SellerGMV",
+            "dataType": "double",
+            "sourceColumn": "SellerGMV"
+          },
+          {
+            "name": "OrderCount",
+            "dataType": "int64",
+            "sourceColumn": "OrderCount"
+          },
+          {
+            "name": "ProductCount",
+            "dataType": "int64",
+            "sourceColumn": "ProductCount"
+          },
+          {
+            "name": "SellerFreight",
+            "dataType": "double",
+            "sourceColumn": "SellerFreight"
+          },
+          {
+            "name": "FreightRatioPct",
+            "dataType": "double",
+            "sourceColumn": "FreightRatioPct"
+          },
+          {
+            "name": "AverageOrderValue",
+            "dataType": "double",
+            "sourceColumn": "AverageOrderValue"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimSeller",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    DataFolder = #\"Data\",\n    Source = Csv.Document(File.Contents(DataFolder & \"\\\\DimSeller.csv\"),[Delimiter=\",\", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"SellerKey\", type text}, {\"SellerState\", type text}, {\"SellerCity\", type text}, {\"GMVRank\", Int64.Type}, {\"SellerGMV\", type number}, {\"OrderCount\", Int64.Type}, {\"ProductCount\", Int64.Type}, {\"SellerFreight\", type number}, {\"FreightRatioPct\", type number}, {\"AverageOrderValue\", type number}}),\n    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"SellerKey\", Order.Ascending}})\nin\n    #\"Sorted Rows\""
+            }
+          }
+        ],
+        "annotations": [],
+        "measures": [
+          {
+            "name": "Sellers",
+            "expression": "COUNTROWS ( DimSeller[SellerKey] )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Top 1 Seller GMV %",
+            "expression": "DIVIDE ( CALCULATE ( SUM ( DimSeller[SellerGMV] ), DimSeller[GMVRank] = 1 ), [GMV] )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Top 10 Sellers GMV %",
+            "expression": "DIVIDE ( CALCULATE ( SUM ( DimSeller[SellerGMV] ), DimSeller[GMVRank] <= 10 ), [GMV] )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Top 100 Sellers GMV %",
+            "expression": "DIVIDE ( CALCULATE ( SUM ( DimSeller[SellerGMV] ), DimSeller[GMVRank] <= 100 ), [GMV] )",
+            "formatString": "0.0\"%\""
+          },
+          {
+            "name": "Seller HHI",
+            "expression": "VAR T = [GMV] RETURN SUMX ( DimSeller, DIVIDE ( DimSeller[SellerGMV], T ) ^ 2 )",
+            "formatString": "0.00000"
+          },
+          {
+            "name": "Cumulative GMV %",
+            "expression": "VAR r = DimSeller[GMVRank] RETURN DIVIDE ( CALCULATE ( SUM ( DimSeller[SellerGMV] ), FILTER ( ALL ( DimSeller ), DimSeller[GMVRank] <= r ) ), [GMV] )",
+            "formatString": "0.0\"%\""
+          }
+        ]
+      },
+      {
+        "name": "DimProduct",
+        "dataCategory": "Dimension",
+        "columns": [
+          {
+            "name": "ProductKey",
+            "dataType": "string",
+            "sourceColumn": "ProductKey",
+            "isKey": true
+          },
+          {
+            "name": "ProductCategory",
+            "dataType": "string",
+            "sourceColumn": "ProductCategory"
+          },
+          {
+            "name": "CategoryEnglish",
+            "dataType": "string",
+            "sourceColumn": "CategoryEnglish"
+          },
+          {
+            "name": "ProductWeightG",
+            "dataType": "double",
+            "sourceColumn": "ProductWeightG"
+          },
+          {
+            "name": "ProductLengthCm",
+            "dataType": "double",
+            "sourceColumn": "ProductLengthCm"
+          },
+          {
+            "name": "ProductHeightCm",
+            "dataType": "double",
+            "sourceColumn": "ProductHeightCm"
+          },
+          {
+            "name": "ProductWidthCm",
+            "dataType": "double",
+            "sourceColumn": "ProductWidthCm"
+          },
+          {
+            "name": "ProductPhotosQty",
+            "dataType": "double",
+            "sourceColumn": "ProductPhotosQty"
+          },
+          {
+            "name": "LineItemCount",
+            "dataType": "int64",
+            "sourceColumn": "LineItemCount"
+          },
+          {
+            "name": "ProductGMV",
+            "dataType": "double",
+            "sourceColumn": "ProductGMV"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimProduct",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    DataFolder = #\"Data\",\n    Source = Csv.Document(File.Contents(DataFolder & \"\\\\DimProduct.csv\"),[Delimiter=\",\", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"ProductKey\", type text}, {\"ProductCategory\", type text}, {\"CategoryEnglish\", type text}, {\"ProductWeightG\", type number}, {\"ProductLengthCm\", type number}, {\"ProductHeightCm\", type number}, {\"ProductWidthCm\", type number}, {\"ProductPhotosQty\", type number}, {\"LineItemCount\", Int64.Type}, {\"ProductGMV\", type number}}),\n    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"ProductKey\", Order.Ascending}})\nin\n    #\"Sorted Rows\""
+            }
+          }
+        ],
+        "annotations": [],
+        "measures": []
+      },
+      {
+        "name": "DimPaymentMethod",
+        "dataCategory": "Dimension",
+        "columns": [
+          {
+            "name": "PaymentMethodKey",
+            "dataType": "string",
+            "sourceColumn": "PaymentMethodKey",
+            "isKey": true
+          },
+          {
+            "name": "PaymentType",
+            "dataType": "string",
+            "sourceColumn": "PaymentType"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description"
+          },
+          {
+            "name": "RatePct",
+            "dataType": "double",
+            "sourceColumn": "RatePct"
+          },
+          {
+            "name": "FixedFee",
+            "dataType": "double",
+            "sourceColumn": "FixedFee"
+          },
+          {
+            "name": "FundingRatePerInstallment",
+            "dataType": "double",
+            "sourceColumn": "FundingRatePerInstallment"
+          },
+          {
+            "name": "IsPromotional",
+            "dataType": "int64",
+            "sourceColumn": "IsPromotional"
+          },
+          {
+            "name": "AssumptionNote",
+            "dataType": "string",
+            "sourceColumn": "AssumptionNote"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimPaymentMethod",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    DataFolder = #\"Data\",\n    Source = Csv.Document(File.Contents(DataFolder & \"\\\\DimPaymentMethod.csv\"),[Delimiter=\",\", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"PaymentMethodKey\", type text}, {\"PaymentType\", type text}, {\"Description\", type text}, {\"RatePct\", type number}, {\"FixedFee\", type number}, {\"FundingRatePerInstallment\", type number}, {\"IsPromotional\", Int64.Type}, {\"AssumptionNote\", type text}}),\n    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"PaymentMethodKey\", Order.Ascending}})\nin\n    #\"Sorted Rows\""
+            }
+          }
+        ],
+        "annotations": [],
+        "measures": [
+          {
+            "name": "Payment Methods",
+            "expression": "COUNTROWS ( DimPaymentMethod[PaymentMethodKey] )",
+            "formatString": "#,##0"
+          },
+          {
+            "name": "Modelled Acquiring Cost %",
+            "expression": "DIVIDE ( [Modelled Acquiring Cost], [Payment Value] )",
+            "formatString": "0.00\"%\""
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "FactOrder_DimDate",
+        "fromTable": "FactOrder",
+        "fromColumn": "DateKey",
+        "toTable": "DimDate",
+        "toColumn": "DateKey"
+      },
+      {
+        "name": "FactOrder_DimCustomer",
+        "fromTable": "FactOrder",
+        "fromColumn": "CustomerKey",
+        "toTable": "DimCustomer",
+        "toColumn": "CustomerKey"
+      },
+      {
+        "name": "FactPayment_FactOrder",
+        "fromTable": "FactPayment",
+        "fromColumn": "OrderKey",
+        "toTable": "FactOrder",
+        "toColumn": "OrderKey"
+      },
+      {
+        "name": "FactPayment_DimPaymentMethod",
+        "fromTable": "FactPayment",
+        "fromColumn": "PaymentMethodKey",
+        "toTable": "DimPaymentMethod",
+        "toColumn": "PaymentMethodKey"
+      },
+      {
+        "name": "FactOrderItem_FactOrder",
+        "fromTable": "FactOrderItem",
+        "fromColumn": "OrderKey",
+        "toTable": "FactOrder",
+        "toColumn": "OrderKey"
+      },
+      {
+        "name": "FactOrderItem_DimProduct",
+        "fromTable": "FactOrderItem",
+        "fromColumn": "ProductKey",
+        "toTable": "DimProduct",
+        "toColumn": "ProductKey"
+      },
+      {
+        "name": "FactOrderItem_DimSeller",
+        "fromTable": "FactOrderItem",
+        "fromColumn": "SellerKey",
+        "toTable": "DimSeller",
+        "toColumn": "SellerKey"
+      }
+    ],
+    "cultures": [],
+    "expressions": []
+  }
+}

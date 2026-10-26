@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "slMethod",
+  "position": {
+    "x": 1290,
+    "y": 235,
+    "z": 0,
+    "height": 130,
+    "width": 290,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "PaymentMethodKey"
+                }
+              },
+              "Property": "PaymentMethodKey",
+              "Name": "FactOrder.PaymentMethodKey"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "FactOrder.PaymentMethodKey"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Payment method'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Between'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

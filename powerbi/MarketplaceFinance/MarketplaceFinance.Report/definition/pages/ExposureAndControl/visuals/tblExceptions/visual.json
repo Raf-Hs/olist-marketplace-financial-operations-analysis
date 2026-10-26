@@ -1,0 +1,144 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "tblExceptions",
+  "position": {
+    "x": 820,
+    "y": 545,
+    "z": 0,
+    "height": 300,
+    "width": 760,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "OrderKey"
+                }
+              },
+              "Property": "OrderKey",
+              "Name": "FactOrder.OrderKey"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "OrderStatus"
+                }
+              },
+              "Property": "OrderStatus",
+              "Name": "FactOrder.OrderStatus"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "CashCollected"
+                }
+              },
+              "Property": "CashCollected",
+              "Name": "FactOrder.CashCollected"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "ExpectedCharge"
+                }
+              },
+              "Property": "ExpectedCharge",
+              "Name": "FactOrder.ExpectedCharge"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "ReconDelta"
+                }
+              },
+              "Property": "ReconDelta",
+              "Name": "FactOrder.ReconDelta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "LineItemCount"
+                }
+              },
+              "Property": "LineItemCount",
+              "Name": "FactOrder.LineItemCount"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "FactOrder.OrderKey"
+        },
+        {
+          "queryRef": "FactOrder.OrderStatus"
+        },
+        {
+          "queryRef": "FactOrder.CashCollected"
+        },
+        {
+          "queryRef": "FactOrder.ExpectedCharge"
+        },
+        {
+          "queryRef": "FactOrder.ReconDelta"
+        },
+        {
+          "queryRef": "FactOrder.LineItemCount"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Reconciliation exceptions (filter ReconBreak = 1 for the full list)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartStatus",
+  "position": {
+    "x": 820,
+    "y": 205,
+    "z": 11,
+    "height": 330,
+    "width": 760,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Cash Collected"
+                }
+              },
+              "Property": "Cash Collected",
+              "Name": "FactOrder.Cash Collected"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "StatusClass"
+                }
+              },
+              "Property": "StatusClass",
+              "Name": "FactOrder.StatusClass"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Cash Collected"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "FactOrder.StatusClass"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cash collected by order status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

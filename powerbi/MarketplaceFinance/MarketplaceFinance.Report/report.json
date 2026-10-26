@@ -1,0 +1,736 @@
+{
+  "id": 0,
+  "resourcePackages": [],
+  "sections": [
+    {
+      "id": 0,
+      "name": "ExecutiveOverview",
+      "displayName": "Executive Overview",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 15,
+          "z": 0,
+          "width": 1100,
+          "height": 45,
+          "config": "{\"name\": \"title\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 15, \"z\": 0, \"width\": 1100, \"height\": 45, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Olist Marketplace - Financial Operations Overview\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\", \"color\": \"#1F3B57\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 58,
+          "z": 0,
+          "width": 1400,
+          "height": 26,
+          "config": "{\"name\": \"subtitle\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 58, \"z\": 0, \"width\": 1400, \"height\": 26, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Cash collected vs revenue earned | refund exposure | payment cost-to-serve | reconciliation control\", \"textStyle\": {\"fontSize\": \"11pt\", \"fontWeight\": \"normal\", \"color\": \"#8D99AE\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 95,
+          "z": 0,
+          "width": 240,
+          "height": 95,
+          "config": "{\"name\": \"card0\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 95, \"z\": 0, \"width\": 240, \"height\": 95, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"GMV\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'GMV (merchandise value)'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 280,
+          "y": 95,
+          "z": 1,
+          "width": 240,
+          "height": 95,
+          "config": "{\"name\": \"card1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 280, \"y\": 95, \"z\": 1, \"width\": 240, \"height\": 95, \"tabOrder\": 1}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Cash Collected\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash collected'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 540,
+          "y": 95,
+          "z": 2,
+          "width": 240,
+          "height": 95,
+          "config": "{\"name\": \"card2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 540, \"y\": 95, \"z\": 2, \"width\": 240, \"height\": 95, \"tabOrder\": 2}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Net Revenue\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Net revenue (after refund exposure)'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 800,
+          "y": 95,
+          "z": 3,
+          "width": 240,
+          "height": 95,
+          "config": "{\"name\": \"card3\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 800, \"y\": 95, \"z\": 3, \"width\": 240, \"height\": 95, \"tabOrder\": 3}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Refund Exposure\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Refund exposure'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1060,
+          "y": 95,
+          "z": 4,
+          "width": 240,
+          "height": 95,
+          "config": "{\"name\": \"card4\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1060, \"y\": 95, \"z\": 4, \"width\": 240, \"height\": 95, \"tabOrder\": 4}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Average Order Value\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Average order value'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1320,
+          "y": 95,
+          "z": 5,
+          "width": 240,
+          "height": 95,
+          "config": "{\"name\": \"card5\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1320, \"y\": 95, \"z\": 5, \"width\": 240, \"height\": 95, \"tabOrder\": 5}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Reconciliation Break Rate\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Reconciliation break rate'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 205,
+          "z": 10,
+          "width": 780,
+          "height": 330,
+          "config": "{\"name\": \"chartCash\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 205, \"z\": 10, \"width\": 780, \"height\": 330, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Values\": {\"queryRef\": \"Cash Collected\"}, \"Category\": {\"queryRef\": \"DimDate[month_start]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash collected by month'\"}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 205,
+          "z": 11,
+          "width": 760,
+          "height": 330,
+          "config": "{\"name\": \"chartStatus\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 205, \"z\": 11, \"width\": 760, \"height\": 330, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Cash Collected\"}, \"Category\": {\"queryRef\": \"FactOrder[StatusClass]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash collected by order status'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 550,
+          "z": 12,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardGap\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 550, \"z\": 12, \"width\": 380, \"height\": 95, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Revenue vs Expected\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash collected above the expected charge'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 420,
+          "y": 550,
+          "z": 13,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardFloat\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 420, \"y\": 550, \"z\": 13, \"width\": 380, \"height\": 95, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Settlement Float\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash held on orders not yet delivered'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 550,
+          "z": 14,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardNetPct\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 550, \"z\": 14, \"width\": 380, \"height\": 95, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Net Revenue % of Cash\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Net revenue as a share of cash collected'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1220,
+          "y": 550,
+          "z": 15,
+          "width": 360,
+          "height": 95,
+          "config": "{\"name\": \"cardBreak\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1220, \"y\": 550, \"z\": 15, \"width\": 360, \"height\": 95, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Gross Break Value\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Gross value of reconciliation breaks'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 665,
+          "z": 0,
+          "width": 1560,
+          "height": 60,
+          "config": "{\"name\": \"note\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 665, \"z\": 0, \"width\": 1560, \"height\": 60, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Cash collected is measured. Refund exposure is cash collected against orders that were cancelled or became unavailable - the source data contains no refund table, so this is an exposure proxy, not a refunds ledger. Modelled payment cost is not shown on this page: it depends on published market-rate assumptions.\", \"textStyle\": {\"fontSize\": \"11pt\", \"fontWeight\": \"normal\", \"color\": \"#8D99AE\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        }
+      ],
+      "config": "{\"visualInteractions\": [], \"filters\": \"[]\", \"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#FFFFFF'\"}}}}}}}]}}",
+      "displayOption": 1,
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": 1,
+      "name": "RevenueGrowth",
+      "displayName": "Revenue and Growth",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 15,
+          "z": 0,
+          "width": 1100,
+          "height": 45,
+          "config": "{\"name\": \"title\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 15, \"z\": 0, \"width\": 1100, \"height\": 45, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Revenue, Growth and Cash Conversion\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\", \"color\": \"#1F3B57\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 58,
+          "z": 0,
+          "width": 1400,
+          "height": 26,
+          "config": "{\"name\": \"subtitle\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 58, \"z\": 0, \"width\": 1400, \"height\": 26, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Growth decomposition on a like-for-like basis (Jan-Aug 2017 vs Jan-Aug 2018)\", \"textStyle\": {\"fontSize\": \"11pt\", \"fontWeight\": \"normal\", \"color\": \"#8D99AE\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1300,
+          "y": 95,
+          "z": 0,
+          "width": 280,
+          "height": 120,
+          "config": "{\"name\": \"slYear\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1300, \"y\": 95, \"z\": 0, \"width\": 280, \"height\": 120, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": {\"queryRef\": \"DimDate[year]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Year'\"}}}}}], \"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Between'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 95,
+          "z": 10,
+          "width": 780,
+          "height": 330,
+          "config": "{\"name\": \"chartTrend\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 95, \"z\": 10, \"width\": 780, \"height\": 330, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Values\": {\"queryRef\": \"Cash Collected\"}, \"Category\": {\"queryRef\": \"DimDate[month_start]\"}, \"Series\": {\"queryRef\": \"DimDate[year]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash collected by month and year'\"}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 95,
+          "z": 11,
+          "width": 760,
+          "height": 330,
+          "config": "{\"name\": \"chartQuarter\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 95, \"z\": 11, \"width\": 760, \"height\": 330, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Net Revenue\"}, \"Category\": {\"queryRef\": \"FactOrder[PurchaseQuarter]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Net revenue by quarter'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 445,
+          "z": 12,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardYoY\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 445, \"z\": 12, \"width\": 380, \"height\": 95, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Cash YoY %\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash collected, year on year'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 420,
+          "y": 445,
+          "z": 13,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardOrdYoY\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 420, \"y\": 445, \"z\": 13, \"width\": 380, \"height\": 95, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Orders YoY %\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Order volume, year on year'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 445,
+          "z": 14,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardAovYoY\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 445, \"z\": 14, \"width\": 380, \"height\": 95, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"AOV YoY %\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Average order value, year on year'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1220,
+          "y": 95,
+          "z": 15,
+          "width": 360,
+          "height": 630,
+          "config": "{\"name\": \"chartState\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1220, \"y\": 95, \"z\": 15, \"width\": 360, \"height\": 630, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"barChart\", \"projections\": {\"Values\": {\"queryRef\": \"Cash Collected\"}, \"Category\": {\"queryRef\": \"DimCustomer[CustomerState]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash collected by customer state'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 560,
+          "z": 16,
+          "width": 780,
+          "height": 300,
+          "config": "{\"name\": \"chartAov\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 560, \"z\": 16, \"width\": 780, \"height\": 300, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Values\": {\"queryRef\": \"Average Order Value\"}, \"Category\": {\"queryRef\": \"DimDate[month_start]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Average order value by month'\"}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 560,
+          "z": 17,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardRepeat\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 560, \"z\": 17, \"width\": 380, \"height\": 95, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Repeat Customer Rate\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Customers with more than one order'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1220,
+          "y": 745,
+          "z": 18,
+          "width": 360,
+          "height": 95,
+          "config": "{\"name\": \"cardPerCust\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1220, \"y\": 745, \"z\": 18, \"width\": 360, \"height\": 95, \"tabOrder\": 18}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Cash per Customer\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash collected per customer'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        }
+      ],
+      "config": "{\"visualInteractions\": [], \"filters\": \"[]\", \"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#FFFFFF'\"}}}}}}}]}}",
+      "displayOption": 1,
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": 2,
+      "name": "PaymentCostToServe",
+      "displayName": "Payment Mix and Cost to Serve",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 15,
+          "z": 0,
+          "width": 1100,
+          "height": 45,
+          "config": "{\"name\": \"title\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 15, \"z\": 0, \"width\": 1100, \"height\": 45, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Payment Mix and Modelled Cost to Serve\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\", \"color\": \"#1F3B57\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 58,
+          "z": 0,
+          "width": 1400,
+          "height": 26,
+          "config": "{\"name\": \"subtitle\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 58, \"z\": 0, \"width\": 1400, \"height\": 26, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"MODELLED: acquiring and instalment-funding rates are published market benchmarks held in DimPaymentMethod, not measured facts about this marketplace\", \"textStyle\": {\"fontSize\": \"11pt\", \"fontWeight\": \"normal\", \"color\": \"#E76F51\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 95,
+          "z": 10,
+          "width": 520,
+          "height": 330,
+          "config": "{\"name\": \"chartMix\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 95, \"z\": 10, \"width\": 520, \"height\": 330, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Payment Value\"}, \"Category\": {\"queryRef\": \"FactPayment[PaymentMethodKey]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Payment value by method'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 560,
+          "y": 95,
+          "z": 11,
+          "width": 520,
+          "height": 330,
+          "config": "{\"name\": \"chartInst\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 560, \"y\": 95, \"z\": 11, \"width\": 520, \"height\": 330, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Payment Value\"}, \"Category\": {\"queryRef\": \"FactPayment[Installments]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Payment value by instalment count'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1100,
+          "y": 95,
+          "z": 12,
+          "width": 480,
+          "height": 330,
+          "config": "{\"name\": \"chartMethodCost\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1100, \"y\": 95, \"z\": 12, \"width\": 480, \"height\": 330, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Modelled Total Payment Cost\"}, \"Category\": {\"queryRef\": \"FactPayment[PaymentMethodKey]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Modelled payment cost by method'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 445,
+          "z": 13,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardVwInst\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 445, \"z\": 13, \"width\": 380, \"height\": 95, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Value Weighted Average Installments\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Value-weighted average instalment depth'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 420,
+          "y": 445,
+          "z": 14,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardInstValue\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 420, \"y\": 445, \"z\": 14, \"width\": 380, \"height\": 95, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Installment Funded Value\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Card value settled on an instalment plan'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 445,
+          "z": 15,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardPayCost\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 445, \"z\": 15, \"width\": 380, \"height\": 95, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Modelled Total Payment Cost\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Modelled total payment cost'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1220,
+          "y": 445,
+          "z": 16,
+          "width": 360,
+          "height": 95,
+          "config": "{\"name\": \"cardContrib\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1220, \"y\": 445, \"z\": 16, \"width\": 360, \"height\": 95, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Contribution After Payment Cost\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Net revenue less modelled payment cost'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 560,
+          "z": 0,
+          "width": 780,
+          "height": 300,
+          "config": "{\"name\": \"tblMethod\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 560, \"z\": 0, \"width\": 780, \"height\": 300, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"DimPaymentMethod[PaymentType]\"}, {\"queryRef\": \"DimPaymentMethod[Description]\"}, {\"queryRef\": \"DimPaymentMethod[RatePct]\"}, {\"queryRef\": \"DimPaymentMethod[FixedFee]\"}, {\"queryRef\": \"DimPaymentMethod[FundingRatePerInstallment]\"}, {\"queryRef\": \"DimPaymentMethod[AssumptionNote]\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cost model assumptions (editable in DimPaymentMethod)'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 560,
+          "z": 17,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardVoucher\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 560, \"z\": 17, \"width\": 380, \"height\": 95, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Voucher Credit\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Marketplace-funded promotional credit'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1220,
+          "y": 560,
+          "z": 18,
+          "width": 360,
+          "height": 95,
+          "config": "{\"name\": \"cardMargin\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1220, \"y\": 560, \"z\": 18, \"width\": 360, \"height\": 95, \"tabOrder\": 18}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Contribution Margin %\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Contribution as a share of net revenue'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        }
+      ],
+      "config": "{\"visualInteractions\": [], \"filters\": \"[]\", \"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#FFFFFF'\"}}}}}}}]}}",
+      "displayOption": 1,
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": 3,
+      "name": "ExposureAndControl",
+      "displayName": "Exposure and Reconciliation",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 15,
+          "z": 0,
+          "width": 1100,
+          "height": 45,
+          "config": "{\"name\": \"title\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 15, \"z\": 0, \"width\": 1100, \"height\": 45, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Refund Exposure and Reconciliation Control\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\", \"color\": \"#1F3B57\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 58,
+          "z": 0,
+          "width": 1400,
+          "height": 26,
+          "config": "{\"name\": \"subtitle\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 58, \"z\": 0, \"width\": 1400, \"height\": 26, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Cash collected but owed back, and cash that cannot be tied to any merchandise record\", \"textStyle\": {\"fontSize\": \"11pt\", \"fontWeight\": \"normal\", \"color\": \"#8D99AE\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1290,
+          "y": 95,
+          "z": 0,
+          "width": 290,
+          "height": 130,
+          "config": "{\"name\": \"slStatus\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1290, \"y\": 95, \"z\": 0, \"width\": 290, \"height\": 130, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": {\"queryRef\": \"FactOrder[StatusClass]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Order status class'\"}}}}}], \"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Between'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1290,
+          "y": 235,
+          "z": 0,
+          "width": 290,
+          "height": 130,
+          "config": "{\"name\": \"slMethod\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1290, \"y\": 235, \"z\": 0, \"width\": 290, \"height\": 130, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": {\"queryRef\": \"FactOrder[PaymentMethodKey]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Payment method'\"}}}}}], \"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Between'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 95,
+          "z": 10,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardExpRate\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 95, \"z\": 10, \"width\": 380, \"height\": 95, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Refund Exposure Rate\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Refund exposure as a share of cash'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 420,
+          "y": 95,
+          "z": 11,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardBreakRate\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 420, \"y\": 95, \"z\": 11, \"width\": 380, \"height\": 95, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Reconciliation Break Rate\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Orders failing the cash-to-order reconciliation'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 95,
+          "z": 12,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardGrossBreak\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 95, \"z\": 12, \"width\": 380, \"height\": 95, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Gross Break Value\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Absolute value of the reconciliation breaks'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1220,
+          "y": 95,
+          "z": 13,
+          "width": 360,
+          "height": 95,
+          "config": "{\"name\": \"cardNoMerch\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1220, \"y\": 95, \"z\": 13, \"width\": 360, \"height\": 95, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Cash Without Merchandise\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cash on orders with no line items'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 205,
+          "z": 14,
+          "width": 780,
+          "height": 320,
+          "config": "{\"name\": \"chartExposure\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 205, \"z\": 14, \"width\": 780, \"height\": 320, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Values\": {\"queryRef\": \"Refund Exposure\"}, \"Category\": {\"queryRef\": \"DimDate[month_start]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Refund exposure by month'\"}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 205,
+          "z": 15,
+          "width": 450,
+          "height": 320,
+          "config": "{\"name\": \"chartExpStatus\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 205, \"z\": 15, \"width\": 450, \"height\": 320, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Refund Exposure\"}, \"Category\": {\"queryRef\": \"FactOrder[OrderStatus]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Refund exposure by order status'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 545,
+          "z": 16,
+          "width": 780,
+          "height": 300,
+          "config": "{\"name\": \"chartBreakType\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 545, \"z\": 16, \"width\": 780, \"height\": 300, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Gross Break Value\"}, \"Category\": {\"queryRef\": \"FactOrder[StatusClass]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Reconciliation break value by status'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 545,
+          "z": 0,
+          "width": 760,
+          "height": 300,
+          "config": "{\"name\": \"tblExceptions\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 545, \"z\": 0, \"width\": 760, \"height\": 300, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"FactOrder[OrderKey]\"}, {\"queryRef\": \"FactOrder[OrderStatus]\"}, {\"queryRef\": \"FactOrder[CashCollected]\"}, {\"queryRef\": \"FactOrder[ExpectedCharge]\"}, {\"queryRef\": \"FactOrder[ReconDelta]\"}, {\"queryRef\": \"FactOrder[LineItemCount]\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Reconciliation exceptions (filter ReconBreak = 1 for the full list)'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        }
+      ],
+      "config": "{\"visualInteractions\": [], \"filters\": \"[]\", \"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#FFFFFF'\"}}}}}}}]}}",
+      "displayOption": 1,
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": 4,
+      "name": "ConcentrationAndRisk",
+      "displayName": "Concentration and Risk",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 15,
+          "z": 0,
+          "width": 1200,
+          "height": 45,
+          "config": "{\"name\": \"title\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 15, \"z\": 0, \"width\": 1200, \"height\": 45, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Concentration, Logistics Cost and Dispute Risk\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\", \"color\": \"#1F3B57\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 58,
+          "z": 0,
+          "width": 1400,
+          "height": 26,
+          "config": "{\"name\": \"subtitle\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 58, \"z\": 0, \"width\": 1400, \"height\": 26, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"vcObjects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Counterparty concentration, freight burden by category, and the dispute rate by instalment depth\", \"textStyle\": {\"fontSize\": \"11pt\", \"fontWeight\": \"normal\", \"color\": \"#8D99AE\", \"fontFamily\": \"Segoe UI\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 95,
+          "z": 10,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardHhi\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 95, \"z\": 10, \"width\": 380, \"height\": 95, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Seller HHI\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Seller concentration index'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 420,
+          "y": 95,
+          "z": 11,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardTop10\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 420, \"y\": 95, \"z\": 11, \"width\": 380, \"height\": 95, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Top 10 Sellers GMV %\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Share of GMV from the ten largest sellers'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 95,
+          "z": 12,
+          "width": 380,
+          "height": 95,
+          "config": "{\"name\": \"cardSellers\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 95, \"z\": 12, \"width\": 380, \"height\": 95, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Sellers\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active sellers'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 1220,
+          "y": 95,
+          "z": 13,
+          "width": 360,
+          "height": 95,
+          "config": "{\"name\": \"cardFreight\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1220, \"y\": 95, \"z\": 13, \"width\": 360, \"height\": 95, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": {\"queryRef\": \"Freight Ratio\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Freight collected as a share of GMV'\"}}}}}], \"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F3B57'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 205,
+          "z": 14,
+          "width": 780,
+          "height": 330,
+          "config": "{\"name\": \"chartPareto\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 205, \"z\": 14, \"width\": 780, \"height\": 330, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Values\": {\"queryRef\": \"Cumulative GMV %\"}, \"Category\": {\"queryRef\": \"DimSeller[GMVRank]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Seller concentration curve (Pareto)'\"}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 205,
+          "z": 15,
+          "width": 760,
+          "height": 330,
+          "config": "{\"name\": \"chartCatFreight\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 205, \"z\": 15, \"width\": 760, \"height\": 330, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"barChart\", \"projections\": {\"Values\": {\"queryRef\": \"Freight Intensity %\"}, \"Category\": {\"queryRef\": \"DimProduct[CategoryEnglish]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Freight burden by product category'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 20,
+          "y": 555,
+          "z": 16,
+          "width": 780,
+          "height": 290,
+          "config": "{\"name\": \"chartDispute\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 555, \"z\": 16, \"width\": 780, \"height\": 290, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Dispute Rate\"}, \"Category\": {\"queryRef\": \"FactOrder[MaxInstallments]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Dispute rate by instalment depth (score 1 or 2 out of 5)'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        },
+        {
+          "x": 820,
+          "y": 555,
+          "z": 17,
+          "width": 760,
+          "height": 290,
+          "config": "{\"name\": \"chartDisputeValue\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 820, \"y\": 555, \"z\": 17, \"width\": 760, \"height\": 290, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Values\": {\"queryRef\": \"Disputed Value\"}, \"Category\": {\"queryRef\": \"FactOrder[StatusClass]\"}}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Disputed value at risk by order status'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "",
+          "dataTransforms": ""
+        }
+      ],
+      "config": "{\"visualInteractions\": [], \"filters\": \"[]\", \"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#FFFFFF'\"}}}}}}}]}}",
+      "displayOption": 1,
+      "width": 1600,
+      "height": 900
+    }
+  ],
+  "config": "{\"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useStylableVisualContainerHeader\": true}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [],
+  "pods": []
+}

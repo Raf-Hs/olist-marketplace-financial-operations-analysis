@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartExposure",
+  "position": {
+    "x": 20,
+    "y": 205,
+    "z": 14,
+    "height": 320,
+    "width": 780,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Refund Exposure"
+                }
+              },
+              "Property": "Refund Exposure",
+              "Name": "FactOrder.Refund Exposure"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDate"
+                    }
+                  },
+                  "Property": "month_start"
+                }
+              },
+              "Property": "month_start",
+              "Name": "DimDate.month_start"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Refund Exposure"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "DimDate.month_start"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Refund exposure by month'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

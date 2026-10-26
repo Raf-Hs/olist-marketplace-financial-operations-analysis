@@ -1,0 +1,736 @@
+{
+  "generated_by": "src/run_queries.py",
+  "database": "marketplace_finance.db",
+  "checks": [
+    {
+      "check": "dq01_record_counts",
+      "description": "Row counts per source table - the first reconciliation against the published dataset shape.",
+      "rows": 8,
+      "result": [
+        {
+          "table_name": "customers",
+          "row_count": 99441
+        },
+        {
+          "table_name": "orders",
+          "row_count": 99441
+        },
+        {
+          "table_name": "order_items",
+          "row_count": 112650
+        },
+        {
+          "table_name": "payments",
+          "row_count": 103886
+        },
+        {
+          "table_name": "reviews",
+          "row_count": 99224
+        },
+        {
+          "table_name": "products",
+          "row_count": 32951
+        },
+        {
+          "table_name": "sellers",
+          "row_count": 3095
+        },
+        {
+          "table_name": "product_category_translation",
+          "row_count": 71
+        }
+      ]
+    },
+    {
+      "check": "dq02_key_uniqueness",
+      "description": "Duplicate primary keys on every source table. All must be zero.",
+      "rows": 7,
+      "result": [
+        {
+          "key_name": "orders.order_id",
+          "duplicates": 0
+        },
+        {
+          "key_name": "customers.customer_id",
+          "duplicates": 0
+        },
+        {
+          "key_name": "order_items(order_id,order_item_id)",
+          "duplicates": 0
+        },
+        {
+          "key_name": "payments(order_id,payment_sequential)",
+          "duplicates": 0
+        },
+        {
+          "key_name": "reviews.review_id",
+          "duplicates": 814
+        },
+        {
+          "key_name": "products.product_id",
+          "duplicates": 0
+        },
+        {
+          "key_name": "sellers.seller_id",
+          "duplicates": 0
+        }
+      ]
+    },
+    {
+      "check": "dq03_referential_integrity",
+      "description": "Orphan rows on every declared foreign key. All must be zero.",
+      "rows": 6,
+      "result": [
+        {
+          "relationship": "order_items -> orders",
+          "orphan_rows": 0
+        },
+        {
+          "relationship": "order_items -> products",
+          "orphan_rows": 0
+        },
+        {
+          "relationship": "order_items -> sellers",
+          "orphan_rows": 0
+        },
+        {
+          "relationship": "payments -> orders",
+          "orphan_rows": 0
+        },
+        {
+          "relationship": "reviews -> orders",
+          "orphan_rows": 0
+        },
+        {
+          "relationship": "orders -> customers",
+          "orphan_rows": 0
+        }
+      ]
+    },
+    {
+      "check": "dq04_null_profile",
+      "description": "Null counts and null rates for every column used in a financial calculation.",
+      "rows": 12,
+      "result": [
+        {
+          "column_name": "orders.order_purchase_timestamp",
+          "rows": 99441,
+          "nulls": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "orders.order_approved_at",
+          "rows": 99441,
+          "nulls": 160,
+          "null_pct": 0.161
+        },
+        {
+          "column_name": "orders.order_delivered_customer_date",
+          "rows": 99441,
+          "nulls": 2965,
+          "null_pct": 2.982
+        },
+        {
+          "column_name": "orders.order_estimated_delivery_date",
+          "rows": 99441,
+          "nulls": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "payments.payment_installments",
+          "rows": 103886,
+          "nulls": 2,
+          "null_pct": 0.002
+        },
+        {
+          "column_name": "payments.payment_type",
+          "rows": 103886,
+          "nulls": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "payments.payment_value",
+          "rows": 103886,
+          "nulls": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "order_items.price",
+          "rows": 112650,
+          "nulls": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "order_items.freight_value",
+          "rows": 112650,
+          "nulls": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "order_items.seller_id",
+          "rows": 112650,
+          "nulls": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "products.product_category_name",
+          "rows": 32951,
+          "nulls": 610,
+          "null_pct": 1.851
+        },
+        {
+          "column_name": "reviews.review_score",
+          "rows": 99224,
+          "nulls": 0,
+          "null_pct": 0.0
+        }
+      ]
+    },
+    {
+      "check": "dq05_missing_order_content",
+      "description": "Orders that carry no line items - the structural break behind the cash-to-revenue reconciliation failure.",
+      "rows": 5,
+      "result": [
+        {
+          "order_status": "unavailable",
+          "orders": 643,
+          "cash_collected": 124339.02,
+          "pct_of_cash_collected": 0.777
+        },
+        {
+          "order_status": "canceled",
+          "orders": 179,
+          "cash_collected": 37337.87,
+          "pct_of_cash_collected": 0.233
+        },
+        {
+          "order_status": "created",
+          "orders": 5,
+          "cash_collected": 688.1,
+          "pct_of_cash_collected": 0.004
+        },
+        {
+          "order_status": "invoiced",
+          "orders": 2,
+          "cash_collected": 149.23,
+          "pct_of_cash_collected": 0.001
+        },
+        {
+          "order_status": "shipped",
+          "orders": 1,
+          "cash_collected": 77.73,
+          "pct_of_cash_collected": 0.0
+        }
+      ]
+    },
+    {
+      "check": "dq06_amount_validity",
+      "description": "Zero, negative and extreme monetary values across payments and line items.",
+      "rows": 6,
+      "result": [
+        {
+          "check_name": "payments with zero value",
+          "rows": 9,
+          "value_at_stake": 0.0
+        },
+        {
+          "check_name": "payments with negative value",
+          "rows": 0,
+          "value_at_stake": NaN
+        },
+        {
+          "check_name": "payments above R$ 3,000 (99.8th pct)",
+          "rows": 51,
+          "value_at_stake": 207949.67
+        },
+        {
+          "check_name": "line items priced at zero",
+          "rows": 0,
+          "value_at_stake": NaN
+        },
+        {
+          "check_name": "line items with freight above merchandise value",
+          "rows": 4119,
+          "value_at_stake": 100273.81
+        },
+        {
+          "check_name": "line items above R$ 3,000",
+          "rows": 25,
+          "value_at_stake": 103074.63
+        }
+      ]
+    },
+    {
+      "check": "dq07_temporal_integrity",
+      "description": "Orders whose event dates are internally inconsistent, plus coverage of each timestamp.",
+      "rows": 6,
+      "result": [
+        {
+          "check_name": "delivered before purchase",
+          "rows": 0
+        },
+        {
+          "check_name": "approved before purchase",
+          "rows": 0
+        },
+        {
+          "check_name": "delivered to customer before handed to carrier",
+          "rows": 23
+        },
+        {
+          "check_name": "orders missing purchase timestamp",
+          "rows": 0
+        },
+        {
+          "check_name": "orders missing approval timestamp",
+          "rows": 160
+        },
+        {
+          "check_name": "orders missing estimated delivery date",
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "check": "dq08_customer_identity_fragmentation",
+      "description": "Repeat buyers split across several customer_id values. Counting customers on customer_id overstates the base.",
+      "rows": 9,
+      "result": [
+        {
+          "customer_ids_for_one_person": 1,
+          "real_customers": 93099
+        },
+        {
+          "customer_ids_for_one_person": 2,
+          "real_customers": 2745
+        },
+        {
+          "customer_ids_for_one_person": 3,
+          "real_customers": 203
+        },
+        {
+          "customer_ids_for_one_person": 4,
+          "real_customers": 30
+        },
+        {
+          "customer_ids_for_one_person": 5,
+          "real_customers": 8
+        },
+        {
+          "customer_ids_for_one_person": 6,
+          "real_customers": 6
+        },
+        {
+          "customer_ids_for_one_person": 7,
+          "real_customers": 3
+        },
+        {
+          "customer_ids_for_one_person": 9,
+          "real_customers": 1
+        },
+        {
+          "customer_ids_for_one_person": 17,
+          "real_customers": 1
+        }
+      ]
+    },
+    {
+      "check": "dq09_unmapped_categories",
+      "description": "Products whose category has no English translation - the only English label source.",
+      "rows": 2,
+      "result": [
+        {
+          "product_category_name": "portateis_cozinha_e_preparadores_de_alimentos",
+          "products": 10,
+          "line_items": 15,
+          "gmv": 3968.53
+        },
+        {
+          "product_category_name": "pc_gamer",
+          "products": 3,
+          "line_items": 9,
+          "gmv": 1545.95
+        }
+      ]
+    },
+    {
+      "check": "dq10_duplicate_reviews",
+      "description": "Orders with more than one review row - the review table is not one-per-order and must be aggregated.",
+      "rows": 3,
+      "result": [
+        {
+          "review_count": 1,
+          "orders": 98126,
+          "cash_collected": 15786906.09
+        },
+        {
+          "review_count": 2,
+          "orders": 543,
+          "cash_collected": 143701.56
+        },
+        {
+          "review_count": 3,
+          "orders": 4,
+          "cash_collected": 1046.76
+        }
+      ]
+    },
+    {
+      "check": "dq11_partial_month_coverage",
+      "description": "Order volume by calendar month. The first and last months are partial and must not be used for period-on-period comparison.",
+      "rows": 25,
+      "result": [
+        {
+          "purchase_month": "2016-09-01",
+          "orders": 4,
+          "cash_collected": 252.24,
+          "coverage_flag": "PARTIAL - exclude from trend analysis"
+        },
+        {
+          "purchase_month": "2016-10-01",
+          "orders": 324,
+          "cash_collected": 59090.48,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2016-12-01",
+          "orders": 1,
+          "cash_collected": 19.62,
+          "coverage_flag": "PARTIAL - exclude from trend analysis"
+        },
+        {
+          "purchase_month": "2017-01-01",
+          "orders": 800,
+          "cash_collected": 138488.04,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-02-01",
+          "orders": 1780,
+          "cash_collected": 291908.01,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-03-01",
+          "orders": 2682,
+          "cash_collected": 449863.6,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-04-01",
+          "orders": 2404,
+          "cash_collected": 417788.03,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-05-01",
+          "orders": 3700,
+          "cash_collected": 592918.82,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-06-01",
+          "orders": 3245,
+          "cash_collected": 511276.38,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-07-01",
+          "orders": 4026,
+          "cash_collected": 592382.92,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-08-01",
+          "orders": 4331,
+          "cash_collected": 674396.32,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-09-01",
+          "orders": 4285,
+          "cash_collected": 727762.45,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-10-01",
+          "orders": 4631,
+          "cash_collected": 779677.88,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-11-01",
+          "orders": 7544,
+          "cash_collected": 1194882.8,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2017-12-01",
+          "orders": 5673,
+          "cash_collected": 878401.48,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-01-01",
+          "orders": 7269,
+          "cash_collected": 1115004.18,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-02-01",
+          "orders": 6728,
+          "cash_collected": 992463.34,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-03-01",
+          "orders": 7211,
+          "cash_collected": 1159652.12,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-04-01",
+          "orders": 6939,
+          "cash_collected": 1160785.48,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-05-01",
+          "orders": 6873,
+          "cash_collected": 1153982.15,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-06-01",
+          "orders": 6167,
+          "cash_collected": 1023880.5,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-07-01",
+          "orders": 6292,
+          "cash_collected": 1066540.75,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-08-01",
+          "orders": 6512,
+          "cash_collected": 1022425.32,
+          "coverage_flag": "full month"
+        },
+        {
+          "purchase_month": "2018-09-01",
+          "orders": 16,
+          "cash_collected": 4439.54,
+          "coverage_flag": "PARTIAL - exclude from trend analysis"
+        },
+        {
+          "purchase_month": "2018-10-01",
+          "orders": 4,
+          "cash_collected": 589.67,
+          "coverage_flag": "PARTIAL - exclude from trend analysis"
+        }
+      ]
+    },
+    {
+      "check": "dq12_cleaning_rule_audit",
+      "description": "Every cleaning and validation rule applied during the load, with the number of records it touched.",
+      "rows": 20,
+      "result": [
+        {
+          "rule_id": 1,
+          "rule_code": "R-CUS-TRIM",
+          "table_name": "customers",
+          "rule_type": "standardisation",
+          "records_affected": 99441,
+          "rule_description": "Trim leading/trailing whitespace and lower-case categorical text (customer_city, customer_state)",
+          "action_taken": "Value rewritten in place; row retained"
+        },
+        {
+          "rule_id": 2,
+          "rule_code": "R-SEL-TRIM",
+          "table_name": "sellers",
+          "rule_type": "standardisation",
+          "records_affected": 3095,
+          "rule_description": "Trim leading/trailing whitespace and lower-case categorical text (seller_city, seller_state)",
+          "action_taken": "Value rewritten in place; row retained"
+        },
+        {
+          "rule_id": 3,
+          "rule_code": "R-PAY-INST0",
+          "table_name": "payments",
+          "rule_type": "standardisation",
+          "records_affected": 2,
+          "rule_description": "payment_installments = 0 is not a meaningful instalment count (it appears only on untyped 'not_defined' payments)",
+          "action_taken": "Set to NULL; the row and its value are retained. NULL instalments are excluded from instalment-weighted averages but included in value totals"
+        },
+        {
+          "rule_id": 4,
+          "rule_code": "V-FK-ORPHAN",
+          "table_name": "all",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Referential integrity check across all declared foreign keys",
+          "action_taken": "No action required - no orphan rows found"
+        },
+        {
+          "rule_id": 5,
+          "rule_code": "V-ORD-NOPAY",
+          "table_name": "orders",
+          "rule_type": "validation",
+          "records_affected": 1,
+          "rule_description": "Orders with no matching row in payments",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 6,
+          "rule_code": "V-PAY-NOORD",
+          "table_name": "payments",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Payment rows with no matching order",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 7,
+          "rule_code": "V-ITEM-NOPROD",
+          "table_name": "order_items",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Line items pointing at a product_id that does not exist",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 8,
+          "rule_code": "V-ITEM-NOSELLER",
+          "table_name": "order_items",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Line items pointing at a seller_id that does not exist",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 9,
+          "rule_code": "V-ORD-NOITEM",
+          "table_name": "orders",
+          "rule_type": "validation",
+          "records_affected": 775,
+          "rule_description": "Orders with no line items at all",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 10,
+          "rule_code": "V-ITEM-ORD",
+          "table_name": "order_items",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Line items whose order_id does not exist",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 11,
+          "rule_code": "V-TIME-DELIV",
+          "table_name": "orders",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Orders delivered before they were purchased (negative cycle time)",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 12,
+          "rule_code": "V-TIME-APPR",
+          "table_name": "orders",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Orders approved before they were purchased",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 13,
+          "rule_code": "V-AMT-ZERO",
+          "table_name": "payments",
+          "rule_type": "validation",
+          "records_affected": 9,
+          "rule_description": "Payment rows with a value of zero",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 14,
+          "rule_code": "V-AMT-NEG",
+          "table_name": "payments",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Payment rows with a negative value",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 15,
+          "rule_code": "V-PRICE-ZERO",
+          "table_name": "order_items",
+          "rule_type": "validation",
+          "records_affected": 0,
+          "rule_description": "Line items priced at zero",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 16,
+          "rule_code": "V-FREIGHT-HIGH",
+          "table_name": "order_items",
+          "rule_type": "validation",
+          "records_affected": 4119,
+          "rule_description": "Line items where the freight charge exceeds the merchandise price",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 17,
+          "rule_code": "V-CAT-UNMAPPED",
+          "table_name": "order_items",
+          "rule_type": "validation",
+          "records_affected": 13,
+          "rule_description": "Products with a category that has no English translation",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 18,
+          "rule_code": "V-REV-MULTI",
+          "table_name": "reviews",
+          "rule_type": "validation",
+          "records_affected": 547,
+          "rule_description": "Orders carrying more than one review row",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 19,
+          "rule_code": "V-REV-DUPID",
+          "table_name": "reviews",
+          "rule_type": "validation",
+          "records_affected": 789,
+          "rule_description": "review_id values recorded against more than one order (a single review submission duplicated across two orders of the same customer)",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        },
+        {
+          "rule_id": 20,
+          "rule_code": "V-CUST-SPLIT",
+          "table_name": "customers",
+          "rule_type": "validation",
+          "records_affected": 2997,
+          "rule_description": "customer_unique_id values mapped to more than one customer_id (identity fragmentation)",
+          "action_taken": "Reported in reports/data_quality.md; excluded from metrics where noted"
+        }
+      ]
+    },
+    {
+      "check": "dq13_fact_table_reconciliation",
+      "description": "The materialised order-level fact must agree row-for-row with its defining view. Any non-zero value is a build defect.",
+      "rows": 1,
+      "result": [
+        {
+          "row_count_difference": 0,
+          "rows_with_a_measure_mismatch": 0,
+          "cash_total_difference": 0.0,
+          "gmv_total_difference": 0.0
+        }
+      ]
+    }
+  ]
+}

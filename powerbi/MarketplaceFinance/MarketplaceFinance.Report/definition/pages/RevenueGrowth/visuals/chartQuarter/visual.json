@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartQuarter",
+  "position": {
+    "x": 820,
+    "y": 95,
+    "z": 11,
+    "height": 330,
+    "width": 760,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Net Revenue"
+                }
+              },
+              "Property": "Net Revenue",
+              "Name": "FactOrder.Net Revenue"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "PurchaseQuarter"
+                }
+              },
+              "Property": "PurchaseQuarter",
+              "Name": "FactOrder.PurchaseQuarter"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Net Revenue"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "FactOrder.PurchaseQuarter"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Net revenue by quarter'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

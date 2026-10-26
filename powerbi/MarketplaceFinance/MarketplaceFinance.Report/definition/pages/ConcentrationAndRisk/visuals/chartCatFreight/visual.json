@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartCatFreight",
+  "position": {
+    "x": 820,
+    "y": 205,
+    "z": 15,
+    "height": 330,
+    "width": 760,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrderItem"
+                    }
+                  },
+                  "Property": "Freight Intensity %"
+                }
+              },
+              "Property": "Freight Intensity %",
+              "Name": "FactOrderItem.Freight Intensity %"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProduct"
+                    }
+                  },
+                  "Property": "CategoryEnglish"
+                }
+              },
+              "Property": "CategoryEnglish",
+              "Name": "DimProduct.CategoryEnglish"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrderItem.Freight Intensity %"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "DimProduct.CategoryEnglish"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Freight burden by product category'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartMix",
+  "position": {
+    "x": 20,
+    "y": 95,
+    "z": 10,
+    "height": 330,
+    "width": 520,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPayment"
+                    }
+                  },
+                  "Property": "Payment Value"
+                }
+              },
+              "Property": "Payment Value",
+              "Name": "FactPayment.Payment Value"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPayment"
+                    }
+                  },
+                  "Property": "PaymentMethodKey"
+                }
+              },
+              "Property": "PaymentMethodKey",
+              "Name": "FactPayment.PaymentMethodKey"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactPayment.Payment Value"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "FactPayment.PaymentMethodKey"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Payment value by method'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

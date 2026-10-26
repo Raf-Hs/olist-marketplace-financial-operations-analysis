@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "MarketplaceFinance"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0941d847-2d56-4cda-a801-f040c7c89aec"
+  }
+}

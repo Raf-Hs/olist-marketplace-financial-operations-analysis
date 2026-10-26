@@ -1,0 +1,144 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "tblMethod",
+  "position": {
+    "x": 20,
+    "y": 560,
+    "z": 0,
+    "height": 300,
+    "width": 780,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPaymentMethod"
+                    }
+                  },
+                  "Property": "PaymentType"
+                }
+              },
+              "Property": "PaymentType",
+              "Name": "DimPaymentMethod.PaymentType"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPaymentMethod"
+                    }
+                  },
+                  "Property": "Description"
+                }
+              },
+              "Property": "Description",
+              "Name": "DimPaymentMethod.Description"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPaymentMethod"
+                    }
+                  },
+                  "Property": "RatePct"
+                }
+              },
+              "Property": "RatePct",
+              "Name": "DimPaymentMethod.RatePct"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPaymentMethod"
+                    }
+                  },
+                  "Property": "FixedFee"
+                }
+              },
+              "Property": "FixedFee",
+              "Name": "DimPaymentMethod.FixedFee"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPaymentMethod"
+                    }
+                  },
+                  "Property": "FundingRatePerInstallment"
+                }
+              },
+              "Property": "FundingRatePerInstallment",
+              "Name": "DimPaymentMethod.FundingRatePerInstallment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPaymentMethod"
+                    }
+                  },
+                  "Property": "AssumptionNote"
+                }
+              },
+              "Property": "AssumptionNote",
+              "Name": "DimPaymentMethod.AssumptionNote"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "DimPaymentMethod.PaymentType"
+        },
+        {
+          "queryRef": "DimPaymentMethod.Description"
+        },
+        {
+          "queryRef": "DimPaymentMethod.RatePct"
+        },
+        {
+          "queryRef": "DimPaymentMethod.FixedFee"
+        },
+        {
+          "queryRef": "DimPaymentMethod.FundingRatePerInstallment"
+        },
+        {
+          "queryRef": "DimPaymentMethod.AssumptionNote"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cost model assumptions (editable in DimPaymentMethod)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

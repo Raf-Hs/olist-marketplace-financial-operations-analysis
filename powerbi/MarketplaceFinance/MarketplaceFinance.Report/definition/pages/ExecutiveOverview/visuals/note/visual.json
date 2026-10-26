@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "note",
+  "position": {
+    "x": 20,
+    "y": 665,
+    "z": 0,
+    "height": 60,
+    "width": 1560,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "visualContainerObjects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Cash collected is measured. Refund exposure is cash collected against orders that were cancelled or became unavailable - the source data contains no refund table, so this is an exposure proxy, not a refunds ledger. Modelled payment cost is not shown on this page: it depends on published market-rate assumptions.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "fontWeight": "normal",
+                      "color": "#8D99AE",
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

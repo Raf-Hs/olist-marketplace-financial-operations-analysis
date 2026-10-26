@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartMethodCost",
+  "position": {
+    "x": 1100,
+    "y": 95,
+    "z": 12,
+    "height": 330,
+    "width": 480,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPayment"
+                    }
+                  },
+                  "Property": "Modelled Total Payment Cost"
+                }
+              },
+              "Property": "Modelled Total Payment Cost",
+              "Name": "FactPayment.Modelled Total Payment Cost"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPayment"
+                    }
+                  },
+                  "Property": "PaymentMethodKey"
+                }
+              },
+              "Property": "PaymentMethodKey",
+              "Name": "FactPayment.PaymentMethodKey"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactPayment.Modelled Total Payment Cost"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "FactPayment.PaymentMethodKey"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Modelled payment cost by method'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

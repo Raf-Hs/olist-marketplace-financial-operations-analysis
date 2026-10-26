@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartState",
+  "position": {
+    "x": 1220,
+    "y": 95,
+    "z": 15,
+    "height": 630,
+    "width": 360,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Cash Collected"
+                }
+              },
+              "Property": "Cash Collected",
+              "Name": "FactOrder.Cash Collected"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCustomer"
+                    }
+                  },
+                  "Property": "CustomerState"
+                }
+              },
+              "Property": "CustomerState",
+              "Name": "DimCustomer.CustomerState"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Cash Collected"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "DimCustomer.CustomerState"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cash collected by customer state'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

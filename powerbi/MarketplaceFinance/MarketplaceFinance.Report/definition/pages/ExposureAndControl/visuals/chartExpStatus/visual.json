@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartExpStatus",
+  "position": {
+    "x": 820,
+    "y": 205,
+    "z": 15,
+    "height": 320,
+    "width": 450,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Refund Exposure"
+                }
+              },
+              "Property": "Refund Exposure",
+              "Name": "FactOrder.Refund Exposure"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "OrderStatus"
+                }
+              },
+              "Property": "OrderStatus",
+              "Name": "FactOrder.OrderStatus"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Refund Exposure"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "FactOrder.OrderStatus"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Refund exposure by order status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

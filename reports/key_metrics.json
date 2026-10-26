@@ -1,0 +1,1570 @@
+{
+  "headline": {
+    "orders": 99441,
+    "unique_customers": 96096,
+    "gmv": 13591643.7,
+    "freight": 2256599.44,
+    "expected_charge": 15848243.14,
+    "cash_collected": 16008872.12,
+    "refund_exposure": 269735.11,
+    "net_revenue": 15739137.01,
+    "reconciliation_gap": 160628.98,
+    "net_revenue_pct_of_cash": 98.315,
+    "aov": 160.99,
+    "freight_ratio_pct": 16.6,
+    "settlement_float": 316675.24,
+    "reconciliation_breaks": 1220,
+    "reconciliation_break_rate_pct": 1.227,
+    "first_order_date": "2016-09-04",
+    "last_order_date": "2018-10-17"
+  },
+  "yoy": {
+    "window": "Jan-Aug 2017 vs Jan-Aug 2018",
+    "orders_2017": 22968,
+    "orders_2018": 53991,
+    "orders_growth_pct": 135.07,
+    "cash_2017": 3669022.12,
+    "cash_2018": 8694733.84,
+    "cash_growth_pct": 136.98,
+    "aov_2017": 159.74,
+    "aov_2018": 161.04,
+    "aov_growth_pct": 0.81,
+    "customers_2017": 22320,
+    "customers_2018": 52743,
+    "customers_growth_pct": 136.3,
+    "freight_ratio_2017": 15.98,
+    "freight_ratio_2018": 17.06,
+    "refund_exposure_2017": 93064.66,
+    "refund_exposure_2018": 100068.32,
+    "refund_rate_2017": 2.536,
+    "refund_rate_2018": 1.151,
+    "freight_ratio_change_pts": 1.08,
+    "refund_exposure_growth_pct": 7.53
+  },
+  "status_mix": [
+    {
+      "order_status": "delivered",
+      "status_class": "fulfilled",
+      "orders": 96478,
+      "cash": 15422461.77,
+      "gmv": 13221498.11,
+      "refund_exposure": 0.0,
+      "orders_without_line_items": 0
+    },
+    {
+      "order_status": "shipped",
+      "status_class": "in_flight",
+      "orders": 1107,
+      "cash": 177213.96,
+      "gmv": 150727.44,
+      "refund_exposure": 0.0,
+      "orders_without_line_items": 1
+    },
+    {
+      "order_status": "canceled",
+      "status_class": "cancelled",
+      "orders": 625,
+      "cash": 143255.6,
+      "gmv": 95235.27,
+      "refund_exposure": 143255.6,
+      "orders_without_line_items": 164
+    },
+    {
+      "order_status": "unavailable",
+      "status_class": "unavailable",
+      "orders": 609,
+      "cash": 126479.51,
+      "gmv": 2007.69,
+      "refund_exposure": 126479.51,
+      "orders_without_line_items": 603
+    },
+    {
+      "order_status": "processing",
+      "status_class": "in_flight",
+      "orders": 301,
+      "cash": 69394.11,
+      "gmv": 60439.22,
+      "refund_exposure": 0.0,
+      "orders_without_line_items": 0
+    },
+    {
+      "order_status": "invoiced",
+      "status_class": "in_flight",
+      "orders": 314,
+      "cash": 69137.99,
+      "gmv": 61526.37,
+      "refund_exposure": 0.0,
+      "orders_without_line_items": 2
+    },
+    {
+      "order_status": "created",
+      "status_class": "in_flight",
+      "orders": 5,
+      "cash": 688.1,
+      "gmv": 0.0,
+      "refund_exposure": 0.0,
+      "orders_without_line_items": 5
+    },
+    {
+      "order_status": "approved",
+      "status_class": "in_flight",
+      "orders": 2,
+      "cash": 241.08,
+      "gmv": 209.6,
+      "refund_exposure": 0.0,
+      "orders_without_line_items": 0
+    }
+  ],
+  "payment_mix": [
+    {
+      "payment_type": "credit_card",
+      "payment_rows": 76795,
+      "orders": 76505,
+      "value": 12542084.19,
+      "pct_of_value": 78.345,
+      "average_value": 163.32,
+      "average_installments": 3.507
+    },
+    {
+      "payment_type": "boleto",
+      "payment_rows": 19784,
+      "orders": 19784,
+      "value": 2869361.27,
+      "pct_of_value": 17.924,
+      "average_value": 145.03,
+      "average_installments": 1.001
+    },
+    {
+      "payment_type": "voucher",
+      "payment_rows": 5775,
+      "orders": 3866,
+      "value": 379436.87,
+      "pct_of_value": 2.37,
+      "average_value": 65.7,
+      "average_installments": 1.0
+    },
+    {
+      "payment_type": "debit_card",
+      "payment_rows": 1529,
+      "orders": 1528,
+      "value": 217989.79,
+      "pct_of_value": 1.362,
+      "average_value": 142.57,
+      "average_installments": 1.0
+    },
+    {
+      "payment_type": "not_defined",
+      "payment_rows": 3,
+      "orders": 3,
+      "value": 0.0,
+      "pct_of_value": 0.0,
+      "average_value": 0.0,
+      "average_installments": 1.0
+    }
+  ],
+  "installments": {
+    "card_value": 12542084.19,
+    "value_on_installment_plans": 10101491.12,
+    "pct_of_card_value_on_installments": 80.541,
+    "orders_with_installments": 51171,
+    "value_weighted_average_installments": 4.967,
+    "max_installments": 24
+  },
+  "cost_model": {
+    "basis": "modelled",
+    "by_method": [
+      {
+        "payment_type": "credit_card",
+        "payment_rows": 76795,
+        "gross_value": 12542084.19,
+        "acquiring_cost": 363720.44,
+        "installment_funding_cost": 990121.38,
+        "total_modelled_cost": 1353841.82
+      },
+      {
+        "payment_type": "boleto",
+        "payment_rows": 19784,
+        "gross_value": 2869361.27,
+        "acquiring_cost": 59352.0,
+        "installment_funding_cost": 0.0,
+        "total_modelled_cost": 59352.0
+      },
+      {
+        "payment_type": "voucher",
+        "payment_rows": 5775,
+        "gross_value": 379436.87,
+        "acquiring_cost": 0.0,
+        "installment_funding_cost": 0.0,
+        "total_modelled_cost": 0.0
+      },
+      {
+        "payment_type": "debit_card",
+        "payment_rows": 1529,
+        "gross_value": 217989.79,
+        "acquiring_cost": 5563.35,
+        "installment_funding_cost": 0.0,
+        "total_modelled_cost": 5563.35
+      },
+      {
+        "payment_type": "not_defined",
+        "payment_rows": 3,
+        "gross_value": 0.0,
+        "acquiring_cost": 0.0,
+        "installment_funding_cost": 0.0,
+        "total_modelled_cost": 0.0
+      }
+    ],
+    "acquiring_cost": 428635.79,
+    "installment_funding_cost": 990121.38,
+    "total_modelled_payment_cost": 1418757.17,
+    "net_revenue": 15739137.01,
+    "contribution_after_payment_cost": 14320379.84,
+    "contribution_margin_pct": 90.99,
+    "installment_funding_pct_of_net_revenue": 6.291,
+    "sensitivity": [
+      {
+        "rate": 0.01,
+        "installment_funding_cost": 497548.43,
+        "pct_of_card_value": 3.967
+      },
+      {
+        "rate": 0.0199,
+        "installment_funding_cost": 990121.38,
+        "pct_of_card_value": 7.894
+      },
+      {
+        "rate": 0.0299,
+        "installment_funding_cost": 1487669.81,
+        "pct_of_card_value": 11.861
+      }
+    ]
+  },
+  "voucher": {
+    "orders": 3866.0,
+    "payment_rows": 5775.0,
+    "value": 379436.87,
+    "pct_of_value": 2.37
+  },
+  "voucher_profile": [
+    {
+      "order_type": "non-voucher order",
+      "orders": 95575,
+      "cash": 15484732.47,
+      "average_order_value": 162.02,
+      "disputed_orders": 13905,
+      "dispute_rate_pct": 14.549,
+      "disputed_value": 2663088.84
+    },
+    {
+      "order_type": "voucher order",
+      "orders": 3866,
+      "cash": 524139.65,
+      "average_order_value": 135.58,
+      "disputed_orders": 628,
+      "dispute_rate_pct": 16.244,
+      "disputed_value": 106163.48
+    }
+  ],
+  "reconciliation": {
+    "expected_charge": 15848243.14,
+    "cash_collected": 16008872.12,
+    "net_break": 160628.98,
+    "gross_break_value": 170716.88,
+    "orders_in_break": 1220,
+    "break_rate_pct": 1.227,
+    "orders_without_line_items": 775,
+    "paid_orders_without_line_items": 772,
+    "cash_without_merchandise": 162591.95
+  },
+  "break_structure": [
+    {
+      "break_reason": "line items present",
+      "size_band": "a. rounding (< R$1)",
+      "orders": 134,
+      "absolute_break": 6.7,
+      "net_break": 4.58
+    },
+    {
+      "break_reason": "line items present",
+      "size_band": "b. R$1 - R$100",
+      "orders": 292,
+      "absolute_break": 4282.99,
+      "net_break": 1038.73
+    },
+    {
+      "break_reason": "line items present",
+      "size_band": "c. R$100 - R$1,000",
+      "orders": 22,
+      "absolute_break": 3833.32,
+      "net_break": -3005.9
+    },
+    {
+      "break_reason": "no line items at all",
+      "size_band": "b. R$1 - R$100",
+      "orders": 358,
+      "absolute_break": 22310.79,
+      "net_break": 22310.79
+    },
+    {
+      "break_reason": "no line items at all",
+      "size_band": "c. R$100 - R$1,000",
+      "orders": 388,
+      "absolute_break": 92522.03,
+      "net_break": 92522.03
+    },
+    {
+      "break_reason": "no line items at all",
+      "size_band": "d. R$1,000+",
+      "orders": 26,
+      "absolute_break": 47759.13,
+      "net_break": 47759.13
+    }
+  ],
+  "refund_exposure": [
+    {
+      "order_status": "canceled",
+      "orders": 625,
+      "cash_collected": 143255.6,
+      "refund_exposure": 143255.6,
+      "orders_without_line_items": 164,
+      "pct_without_line_items": 26.24
+    },
+    {
+      "order_status": "unavailable",
+      "orders": 609,
+      "cash_collected": 126479.51,
+      "refund_exposure": 126479.51,
+      "orders_without_line_items": 603,
+      "pct_without_line_items": 99.01
+    }
+  ],
+  "refund_exposure_total": {
+    "orders": 1234,
+    "cash_collected": 269735.11,
+    "refund_exposure": 269735.11,
+    "orders_without_line_items": 767
+  },
+  "dispute_by_installments": [
+    {
+      "instalment_bucket": "1 (paid in full)",
+      "orders": 24005,
+      "cash": 2422409.82,
+      "average_order_value": 100.91,
+      "disputed_orders": 3112,
+      "dispute_rate_pct": 12.964,
+      "disputed_value": 364299.46
+    },
+    {
+      "instalment_bucket": "2 - 3",
+      "orders": 22649,
+      "cash": 3070682.59,
+      "average_order_value": 135.58,
+      "disputed_orders": 3278,
+      "dispute_rate_pct": 14.473,
+      "disputed_value": 492308.96
+    },
+    {
+      "instalment_bucket": "4 - 6",
+      "orders": 16160,
+      "cash": 2950182.46,
+      "average_order_value": 182.56,
+      "disputed_orders": 2454,
+      "dispute_rate_pct": 15.186,
+      "disputed_value": 508826.51
+    },
+    {
+      "instalment_bucket": "7 - 12",
+      "orders": 11976,
+      "cash": 4022205.8,
+      "average_order_value": 335.86,
+      "disputed_orders": 2078,
+      "dispute_rate_pct": 17.351,
+      "disputed_value": 776882.64
+    },
+    {
+      "instalment_bucket": "13 +",
+      "orders": 185,
+      "cash": 77046.48,
+      "average_order_value": 416.47,
+      "disputed_orders": 39,
+      "dispute_rate_pct": 21.081,
+      "disputed_value": 16679.51
+    }
+  ],
+  "dispute_total": {
+    "orders_with_review": 98673,
+    "disputed_orders": 14533,
+    "disputed_value": 2769252.32,
+    "pct_of_cash_at_risk": 17.462,
+    "pct_of_orders_disputed": 14.728
+  },
+  "seller_concentration": {
+    "sellers": 3095,
+    "total_gmv": 13591643.7,
+    "top1_pct": 1.688,
+    "top10_pct": 13.15,
+    "top100_pct": 45.061,
+    "top1000_pct": 91.472,
+    "hhi": 0.00357,
+    "sellers_above_1pct": 9
+  },
+  "category_freight": [
+    {
+      "category_english": "health_beauty",
+      "gmv": 1258681.34,
+      "freight": 182748.35,
+      "freight_ratio_pct": 14.52,
+      "line_item_count": 9670
+    },
+    {
+      "category_english": "watches_gifts",
+      "gmv": 1205005.68,
+      "freight": 100535.93,
+      "freight_ratio_pct": 8.34,
+      "line_item_count": 5991
+    },
+    {
+      "category_english": "bed_bath_table",
+      "gmv": 1036988.68,
+      "freight": 204693.04,
+      "freight_ratio_pct": 19.74,
+      "line_item_count": 11115
+    },
+    {
+      "category_english": "sports_leisure",
+      "gmv": 988048.97,
+      "freight": 170274.23,
+      "freight_ratio_pct": 17.23,
+      "line_item_count": 8641
+    },
+    {
+      "category_english": "computers_accessories",
+      "gmv": 911954.32,
+      "freight": 147318.08,
+      "freight_ratio_pct": 16.15,
+      "line_item_count": 7827
+    },
+    {
+      "category_english": "furniture_decor",
+      "gmv": 729762.49,
+      "freight": 173483.29,
+      "freight_ratio_pct": 23.77,
+      "line_item_count": 8334
+    },
+    {
+      "category_english": "cool_stuff",
+      "gmv": 635290.85,
+      "freight": 84039.1,
+      "freight_ratio_pct": 13.23,
+      "line_item_count": 3796
+    },
+    {
+      "category_english": "housewares",
+      "gmv": 632248.66,
+      "freight": 147070.15,
+      "freight_ratio_pct": 23.26,
+      "line_item_count": 6964
+    },
+    {
+      "category_english": "auto",
+      "gmv": 592720.11,
+      "freight": 92769.33,
+      "freight_ratio_pct": 15.65,
+      "line_item_count": 4235
+    },
+    {
+      "category_english": "garden_tools",
+      "gmv": 485256.46,
+      "freight": 99171.18,
+      "freight_ratio_pct": 20.44,
+      "line_item_count": 4347
+    },
+    {
+      "category_english": "toys",
+      "gmv": 483946.6,
+      "freight": 78211.42,
+      "freight_ratio_pct": 16.16,
+      "line_item_count": 4117
+    },
+    {
+      "category_english": "baby",
+      "gmv": 411764.89,
+      "freight": 68353.11,
+      "freight_ratio_pct": 16.6,
+      "line_item_count": 3065
+    },
+    {
+      "category_english": "perfumery",
+      "gmv": 399124.87,
+      "freight": 54213.84,
+      "freight_ratio_pct": 13.58,
+      "line_item_count": 3419
+    },
+    {
+      "category_english": "telephony",
+      "gmv": 323667.53,
+      "freight": 71215.79,
+      "freight_ratio_pct": 22.0,
+      "line_item_count": 4545
+    },
+    {
+      "category_english": "office_furniture",
+      "gmv": 273960.7,
+      "freight": 68571.95,
+      "freight_ratio_pct": 25.03,
+      "line_item_count": 1691
+    },
+    {
+      "category_english": "stationery",
+      "gmv": 230943.23,
+      "freight": 46798.48,
+      "freight_ratio_pct": 20.26,
+      "line_item_count": 2517
+    },
+    {
+      "category_english": "computers",
+      "gmv": 222963.13,
+      "freight": 9836.3,
+      "freight_ratio_pct": 4.41,
+      "line_item_count": 203
+    },
+    {
+      "category_english": "pet_shop",
+      "gmv": 214315.41,
+      "freight": 39561.24,
+      "freight_ratio_pct": 18.46,
+      "line_item_count": 1947
+    },
+    {
+      "category_english": "musical_instruments",
+      "gmv": 191498.88,
+      "freight": 18638.49,
+      "freight_ratio_pct": 9.73,
+      "line_item_count": 680
+    },
+    {
+      "category_english": "small_appliances",
+      "gmv": 190648.58,
+      "freight": 16020.25,
+      "freight_ratio_pct": 8.4,
+      "line_item_count": 679
+    },
+    {
+      "category_english": NaN,
+      "gmv": 179535.28,
+      "freight": 28257.32,
+      "freight_ratio_pct": 15.74,
+      "line_item_count": 1603
+    },
+    {
+      "category_english": "electronics",
+      "gmv": 160246.74,
+      "freight": 46578.32,
+      "freight_ratio_pct": 29.07,
+      "line_item_count": 2767
+    },
+    {
+      "category_english": "consoles_games",
+      "gmv": 157465.22,
+      "freight": 19828.02,
+      "freight_ratio_pct": 12.59,
+      "line_item_count": 1137
+    },
+    {
+      "category_english": "fashion_bags_accessories",
+      "gmv": 152823.54,
+      "freight": 31450.0,
+      "freight_ratio_pct": 20.58,
+      "line_item_count": 2031
+    },
+    {
+      "category_english": "construction_tools_construction",
+      "gmv": 144677.59,
+      "freight": 20650.41,
+      "freight_ratio_pct": 14.27,
+      "line_item_count": 929
+    },
+    {
+      "category_english": "luggage_accessories",
+      "gmv": 140429.98,
+      "freight": 30445.23,
+      "freight_ratio_pct": 21.68,
+      "line_item_count": 1092
+    },
+    {
+      "category_english": "home_appliances_2",
+      "gmv": 113317.74,
+      "freight": 10600.18,
+      "freight_ratio_pct": 9.35,
+      "line_item_count": 238
+    },
+    {
+      "category_english": "home_construction",
+      "gmv": 83088.12,
+      "freight": 13832.24,
+      "freight_ratio_pct": 16.65,
+      "line_item_count": 604
+    },
+    {
+      "category_english": "home_appliances",
+      "gmv": 80171.53,
+      "freight": 14818.9,
+      "freight_ratio_pct": 18.48,
+      "line_item_count": 771
+    },
+    {
+      "category_english": "agro_industry_and_commerce",
+      "gmv": 72530.47,
+      "freight": 5843.6,
+      "freight_ratio_pct": 8.06,
+      "line_item_count": 212
+    },
+    {
+      "category_english": "furniture_living_room",
+      "gmv": 68916.56,
+      "freight": 17968.17,
+      "freight_ratio_pct": 26.07,
+      "line_item_count": 503
+    },
+    {
+      "category_english": "fixed_telephony",
+      "gmv": 59583.0,
+      "freight": 4637.81,
+      "freight_ratio_pct": 7.78,
+      "line_item_count": 264
+    },
+    {
+      "category_english": "home_confort",
+      "gmv": 58572.04,
+      "freight": 8501.23,
+      "freight_ratio_pct": 14.51,
+      "line_item_count": 434
+    },
+    {
+      "category_english": "air_conditioning",
+      "gmv": 55024.96,
+      "freight": 6749.23,
+      "freight_ratio_pct": 12.27,
+      "line_item_count": 297
+    },
+    {
+      "category_english": "audio",
+      "gmv": 50688.5,
+      "freight": 5710.44,
+      "freight_ratio_pct": 11.27,
+      "line_item_count": 364
+    },
+    {
+      "category_english": "small_appliances_home_oven_and_coffee",
+      "gmv": 47445.71,
+      "freight": 2747.86,
+      "freight_ratio_pct": 5.79,
+      "line_item_count": 76
+    },
+    {
+      "category_english": "books_general_interest",
+      "gmv": 46856.88,
+      "freight": 9195.52,
+      "freight_ratio_pct": 19.62,
+      "line_item_count": 553
+    },
+    {
+      "category_english": "kitchen_dining_laundry_garden_furniture",
+      "gmv": 46328.37,
+      "freight": 11999.43,
+      "freight_ratio_pct": 25.9,
+      "line_item_count": 281
+    },
+    {
+      "category_english": "construction_tools_lights",
+      "gmv": 41080.0,
+      "freight": 7583.8,
+      "freight_ratio_pct": 18.46,
+      "line_item_count": 304
+    },
+    {
+      "category_english": "construction_tools_safety",
+      "gmv": 40544.52,
+      "freight": 3919.1,
+      "freight_ratio_pct": 9.67,
+      "line_item_count": 194
+    },
+    {
+      "category_english": "industry_commerce_and_business",
+      "gmv": 39669.61,
+      "freight": 7884.68,
+      "freight_ratio_pct": 19.88,
+      "line_item_count": 268
+    },
+    {
+      "category_english": "food",
+      "gmv": 29393.41,
+      "freight": 7271.03,
+      "freight_ratio_pct": 24.74,
+      "line_item_count": 510
+    },
+    {
+      "category_english": "market_place",
+      "gmv": 28378.47,
+      "freight": 5456.06,
+      "freight_ratio_pct": 19.23,
+      "line_item_count": 311
+    },
+    {
+      "category_english": "costruction_tools_garden",
+      "gmv": 25715.89,
+      "freight": 5311.4,
+      "freight_ratio_pct": 20.65,
+      "line_item_count": 238
+    },
+    {
+      "category_english": "art",
+      "gmv": 24202.64,
+      "freight": 4045.17,
+      "freight_ratio_pct": 16.71,
+      "line_item_count": 209
+    },
+    {
+      "category_english": "fashion_shoes",
+      "gmv": 23562.77,
+      "freight": 4918.87,
+      "freight_ratio_pct": 20.88,
+      "line_item_count": 262
+    },
+    {
+      "category_english": "drinks",
+      "gmv": 22428.7,
+      "freight": 5741.25,
+      "freight_ratio_pct": 25.6,
+      "line_item_count": 379
+    },
+    {
+      "category_english": "signaling_and_security",
+      "gmv": 21509.23,
+      "freight": 6507.82,
+      "freight_ratio_pct": 30.26,
+      "line_item_count": 199
+    },
+    {
+      "category_english": "furniture_bedroom",
+      "gmv": 20028.78,
+      "freight": 4632.23,
+      "freight_ratio_pct": 23.13,
+      "line_item_count": 109
+    },
+    {
+      "category_english": "books_technical",
+      "gmv": 19096.06,
+      "freight": 4283.06,
+      "freight_ratio_pct": 22.43,
+      "line_item_count": 267
+    },
+    {
+      "category_english": "costruction_tools_tools",
+      "gmv": 15903.95,
+      "freight": 2030.22,
+      "freight_ratio_pct": 12.77,
+      "line_item_count": 103
+    },
+    {
+      "category_english": "food_drink",
+      "gmv": 15179.48,
+      "freight": 4507.99,
+      "freight_ratio_pct": 29.7,
+      "line_item_count": 278
+    },
+    {
+      "category_english": "fashion_male_clothing",
+      "gmv": 10797.82,
+      "freight": 2152.41,
+      "freight_ratio_pct": 19.93,
+      "line_item_count": 132
+    },
+    {
+      "category_english": "fashion_underwear_beach",
+      "gmv": 9541.55,
+      "freight": 1916.19,
+      "freight_ratio_pct": 20.08,
+      "line_item_count": 131
+    },
+    {
+      "category_english": "christmas_supplies",
+      "gmv": 8800.82,
+      "freight": 3229.3,
+      "freight_ratio_pct": 36.69,
+      "line_item_count": 153
+    },
+    {
+      "category_english": "tablets_printing_image",
+      "gmv": 7528.41,
+      "freight": 1226.2,
+      "freight_ratio_pct": 16.29,
+      "line_item_count": 83
+    },
+    {
+      "category_english": "cine_photo",
+      "gmv": 6933.46,
+      "freight": 1256.2,
+      "freight_ratio_pct": 18.12,
+      "line_item_count": 72
+    },
+    {
+      "category_english": "music",
+      "gmv": 6034.35,
+      "freight": 690.51,
+      "freight_ratio_pct": 11.44,
+      "line_item_count": 38
+    },
+    {
+      "category_english": "dvds_blu_ray",
+      "gmv": 5999.39,
+      "freight": 1288.74,
+      "freight_ratio_pct": 21.48,
+      "line_item_count": 64
+    },
+    {
+      "category_english": "books_imported",
+      "gmv": 4639.85,
+      "freight": 769.85,
+      "freight_ratio_pct": 16.59,
+      "line_item_count": 60
+    },
+    {
+      "category_english": "party_supplies",
+      "gmv": 4485.18,
+      "freight": 827.97,
+      "freight_ratio_pct": 18.46,
+      "line_item_count": 43
+    },
+    {
+      "category_english": "furniture_mattress_and_upholstery",
+      "gmv": 4368.08,
+      "freight": 1630.46,
+      "freight_ratio_pct": 37.33,
+      "line_item_count": 38
+    },
+    {
+      "category_english": "portateis_cozinha_e_preparadores_de_alimentos",
+      "gmv": 3968.53,
+      "freight": 309.76,
+      "freight_ratio_pct": 7.81,
+      "line_item_count": 15
+    },
+    {
+      "category_english": "fashio_female_clothing",
+      "gmv": 2803.64,
+      "freight": 621.75,
+      "freight_ratio_pct": 22.18,
+      "line_item_count": 48
+    },
+    {
+      "category_english": "fashion_sport",
+      "gmv": 2119.51,
+      "freight": 578.13,
+      "freight_ratio_pct": 27.28,
+      "line_item_count": 30
+    },
+    {
+      "category_english": "la_cuisine",
+      "gmv": 2054.99,
+      "freight": 333.55,
+      "freight_ratio_pct": 16.23,
+      "line_item_count": 14
+    },
+    {
+      "category_english": "arts_and_craftmanship",
+      "gmv": 1814.01,
+      "freight": 370.13,
+      "freight_ratio_pct": 20.4,
+      "line_item_count": 24
+    },
+    {
+      "category_english": "diapers_and_hygiene",
+      "gmv": 1567.59,
+      "freight": 573.68,
+      "freight_ratio_pct": 36.6,
+      "line_item_count": 39
+    },
+    {
+      "category_english": "pc_gamer",
+      "gmv": 1545.95,
+      "freight": 133.57,
+      "freight_ratio_pct": 8.64,
+      "line_item_count": 9
+    },
+    {
+      "category_english": "flowers",
+      "gmv": 1110.04,
+      "freight": 488.87,
+      "freight_ratio_pct": 44.04,
+      "line_item_count": 33
+    },
+    {
+      "category_english": "home_comfort_2",
+      "gmv": 760.27,
+      "freight": 410.31,
+      "freight_ratio_pct": 53.97,
+      "line_item_count": 30
+    },
+    {
+      "category_english": "cds_dvds_musicals",
+      "gmv": 730.0,
+      "freight": 224.99,
+      "freight_ratio_pct": 30.82,
+      "line_item_count": 14
+    },
+    {
+      "category_english": "fashion_childrens_clothes",
+      "gmv": 569.85,
+      "freight": 95.51,
+      "freight_ratio_pct": 16.76,
+      "line_item_count": 8
+    },
+    {
+      "category_english": "security_and_services",
+      "gmv": 283.29,
+      "freight": 41.22,
+      "freight_ratio_pct": 14.55,
+      "line_item_count": 2
+    }
+  ],
+  "category_freight_by_burden": [
+    {
+      "category_english": "electronics",
+      "gmv": 160246.74,
+      "freight": 46578.32,
+      "freight_ratio_pct": 29.07,
+      "line_item_count": 2767
+    },
+    {
+      "category_english": "office_furniture",
+      "gmv": 273960.7,
+      "freight": 68571.95,
+      "freight_ratio_pct": 25.03,
+      "line_item_count": 1691
+    },
+    {
+      "category_english": "furniture_decor",
+      "gmv": 729762.49,
+      "freight": 173483.29,
+      "freight_ratio_pct": 23.77,
+      "line_item_count": 8334
+    },
+    {
+      "category_english": "housewares",
+      "gmv": 632248.66,
+      "freight": 147070.15,
+      "freight_ratio_pct": 23.26,
+      "line_item_count": 6964
+    },
+    {
+      "category_english": "telephony",
+      "gmv": 323667.53,
+      "freight": 71215.79,
+      "freight_ratio_pct": 22.0,
+      "line_item_count": 4545
+    },
+    {
+      "category_english": "luggage_accessories",
+      "gmv": 140429.98,
+      "freight": 30445.23,
+      "freight_ratio_pct": 21.68,
+      "line_item_count": 1092
+    },
+    {
+      "category_english": "fashion_bags_accessories",
+      "gmv": 152823.54,
+      "freight": 31450.0,
+      "freight_ratio_pct": 20.58,
+      "line_item_count": 2031
+    },
+    {
+      "category_english": "garden_tools",
+      "gmv": 485256.46,
+      "freight": 99171.18,
+      "freight_ratio_pct": 20.44,
+      "line_item_count": 4347
+    },
+    {
+      "category_english": "stationery",
+      "gmv": 230943.23,
+      "freight": 46798.48,
+      "freight_ratio_pct": 20.26,
+      "line_item_count": 2517
+    },
+    {
+      "category_english": "bed_bath_table",
+      "gmv": 1036988.68,
+      "freight": 204693.04,
+      "freight_ratio_pct": 19.74,
+      "line_item_count": 11115
+    },
+    {
+      "category_english": "pet_shop",
+      "gmv": 214315.41,
+      "freight": 39561.24,
+      "freight_ratio_pct": 18.46,
+      "line_item_count": 1947
+    },
+    {
+      "category_english": "sports_leisure",
+      "gmv": 988048.97,
+      "freight": 170274.23,
+      "freight_ratio_pct": 17.23,
+      "line_item_count": 8641
+    },
+    {
+      "category_english": "baby",
+      "gmv": 411764.89,
+      "freight": 68353.11,
+      "freight_ratio_pct": 16.6,
+      "line_item_count": 3065
+    },
+    {
+      "category_english": "toys",
+      "gmv": 483946.6,
+      "freight": 78211.42,
+      "freight_ratio_pct": 16.16,
+      "line_item_count": 4117
+    },
+    {
+      "category_english": "computers_accessories",
+      "gmv": 911954.32,
+      "freight": 147318.08,
+      "freight_ratio_pct": 16.15,
+      "line_item_count": 7827
+    },
+    {
+      "category_english": NaN,
+      "gmv": 179535.28,
+      "freight": 28257.32,
+      "freight_ratio_pct": 15.74,
+      "line_item_count": 1603
+    },
+    {
+      "category_english": "auto",
+      "gmv": 592720.11,
+      "freight": 92769.33,
+      "freight_ratio_pct": 15.65,
+      "line_item_count": 4235
+    },
+    {
+      "category_english": "health_beauty",
+      "gmv": 1258681.34,
+      "freight": 182748.35,
+      "freight_ratio_pct": 14.52,
+      "line_item_count": 9670
+    },
+    {
+      "category_english": "construction_tools_construction",
+      "gmv": 144677.59,
+      "freight": 20650.41,
+      "freight_ratio_pct": 14.27,
+      "line_item_count": 929
+    },
+    {
+      "category_english": "perfumery",
+      "gmv": 399124.87,
+      "freight": 54213.84,
+      "freight_ratio_pct": 13.58,
+      "line_item_count": 3419
+    },
+    {
+      "category_english": "cool_stuff",
+      "gmv": 635290.85,
+      "freight": 84039.1,
+      "freight_ratio_pct": 13.23,
+      "line_item_count": 3796
+    },
+    {
+      "category_english": "consoles_games",
+      "gmv": 157465.22,
+      "freight": 19828.02,
+      "freight_ratio_pct": 12.59,
+      "line_item_count": 1137
+    },
+    {
+      "category_english": "musical_instruments",
+      "gmv": 191498.88,
+      "freight": 18638.49,
+      "freight_ratio_pct": 9.73,
+      "line_item_count": 680
+    },
+    {
+      "category_english": "home_appliances_2",
+      "gmv": 113317.74,
+      "freight": 10600.18,
+      "freight_ratio_pct": 9.35,
+      "line_item_count": 238
+    },
+    {
+      "category_english": "small_appliances",
+      "gmv": 190648.58,
+      "freight": 16020.25,
+      "freight_ratio_pct": 8.4,
+      "line_item_count": 679
+    },
+    {
+      "category_english": "watches_gifts",
+      "gmv": 1205005.68,
+      "freight": 100535.93,
+      "freight_ratio_pct": 8.34,
+      "line_item_count": 5991
+    },
+    {
+      "category_english": "computers",
+      "gmv": 222963.13,
+      "freight": 9836.3,
+      "freight_ratio_pct": 4.41,
+      "line_item_count": 203
+    }
+  ],
+  "freight_extremes": {
+    "line_items": 112650,
+    "items_freight_exceeds_price": 4119,
+    "pct_items": 3.66,
+    "freight_over_merchandise_value": 27659.95,
+    "total_freight": 2256599.44,
+    "portfolio_freight_ratio_pct": 16.6
+  },
+  "customer_economics": {
+    "unique_customers": 96096,
+    "orders": 99441,
+    "cash": 16008872.12,
+    "repeat_customers": 2997,
+    "repeat_customer_rate_pct": 3.119,
+    "cash_per_customer": 166.59,
+    "orders_per_customer": 1.0348
+  },
+  "identity_fragmentation": {
+    "customer_rows": 99441,
+    "unique_customers": 96096,
+    "customers_split_across_ids": 2997,
+    "worst_case_ids_for_one_customer": 17
+  },
+  "fulfilment": {
+    "delivered_orders": 96478.0,
+    "avg_delivery_days": 12.56,
+    "delivered_late": 7820.0,
+    "pct_delivered_late": 8.105
+  },
+  "data_quality": [
+    {
+      "rule_code": "R-CUS-TRIM",
+      "table_name": "customers",
+      "rule_type": "standardisation",
+      "records_affected": 99441,
+      "rule_description": "Trim leading/trailing whitespace and lower-case categorical text (customer_city, customer_state)"
+    },
+    {
+      "rule_code": "R-SEL-TRIM",
+      "table_name": "sellers",
+      "rule_type": "standardisation",
+      "records_affected": 3095,
+      "rule_description": "Trim leading/trailing whitespace and lower-case categorical text (seller_city, seller_state)"
+    },
+    {
+      "rule_code": "R-PAY-INST0",
+      "table_name": "payments",
+      "rule_type": "standardisation",
+      "records_affected": 2,
+      "rule_description": "payment_installments = 0 is not a meaningful instalment count (it appears only on untyped 'not_defined' payments)"
+    },
+    {
+      "rule_code": "V-FK-ORPHAN",
+      "table_name": "all",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Referential integrity check across all declared foreign keys"
+    },
+    {
+      "rule_code": "V-ORD-NOPAY",
+      "table_name": "orders",
+      "rule_type": "validation",
+      "records_affected": 1,
+      "rule_description": "Orders with no matching row in payments"
+    },
+    {
+      "rule_code": "V-PAY-NOORD",
+      "table_name": "payments",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Payment rows with no matching order"
+    },
+    {
+      "rule_code": "V-ITEM-NOPROD",
+      "table_name": "order_items",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Line items pointing at a product_id that does not exist"
+    },
+    {
+      "rule_code": "V-ITEM-NOSELLER",
+      "table_name": "order_items",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Line items pointing at a seller_id that does not exist"
+    },
+    {
+      "rule_code": "V-ORD-NOITEM",
+      "table_name": "orders",
+      "rule_type": "validation",
+      "records_affected": 775,
+      "rule_description": "Orders with no line items at all"
+    },
+    {
+      "rule_code": "V-ITEM-ORD",
+      "table_name": "order_items",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Line items whose order_id does not exist"
+    },
+    {
+      "rule_code": "V-TIME-DELIV",
+      "table_name": "orders",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Orders delivered before they were purchased (negative cycle time)"
+    },
+    {
+      "rule_code": "V-TIME-APPR",
+      "table_name": "orders",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Orders approved before they were purchased"
+    },
+    {
+      "rule_code": "V-AMT-ZERO",
+      "table_name": "payments",
+      "rule_type": "validation",
+      "records_affected": 9,
+      "rule_description": "Payment rows with a value of zero"
+    },
+    {
+      "rule_code": "V-AMT-NEG",
+      "table_name": "payments",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Payment rows with a negative value"
+    },
+    {
+      "rule_code": "V-PRICE-ZERO",
+      "table_name": "order_items",
+      "rule_type": "validation",
+      "records_affected": 0,
+      "rule_description": "Line items priced at zero"
+    },
+    {
+      "rule_code": "V-FREIGHT-HIGH",
+      "table_name": "order_items",
+      "rule_type": "validation",
+      "records_affected": 4119,
+      "rule_description": "Line items where the freight charge exceeds the merchandise price"
+    },
+    {
+      "rule_code": "V-CAT-UNMAPPED",
+      "table_name": "order_items",
+      "rule_type": "validation",
+      "records_affected": 13,
+      "rule_description": "Products with a category that has no English translation"
+    },
+    {
+      "rule_code": "V-REV-MULTI",
+      "table_name": "reviews",
+      "rule_type": "validation",
+      "records_affected": 547,
+      "rule_description": "Orders carrying more than one review row"
+    },
+    {
+      "rule_code": "V-REV-DUPID",
+      "table_name": "reviews",
+      "rule_type": "validation",
+      "records_affected": 789,
+      "rule_description": "review_id values recorded against more than one order (a single review submission duplicated across two orders of the same customer)"
+    },
+    {
+      "rule_code": "V-CUST-SPLIT",
+      "table_name": "customers",
+      "rule_type": "validation",
+      "records_affected": 2997,
+      "rule_description": "customer_unique_id values mapped to more than one customer_id (identity fragmentation)"
+    }
+  ],
+  "monthly": [
+    {
+      "purchase_month": "2016-09-01",
+      "orders": 4,
+      "cash": 252.24,
+      "gmv": 267.36,
+      "refund_exposure": 116.01,
+      "average_order_value": 63.06,
+      "freight_ratio_pct": 32.69,
+      "refund_exposure_pct": 45.992,
+      "active_customers": 4
+    },
+    {
+      "purchase_month": "2016-10-01",
+      "orders": 324,
+      "cash": 59090.48,
+      "gmv": 49507.66,
+      "refund_exposure": 7432.95,
+      "average_order_value": 182.38,
+      "freight_ratio_pct": 14.75,
+      "refund_exposure_pct": 12.579,
+      "active_customers": 321
+    },
+    {
+      "purchase_month": "2016-12-01",
+      "orders": 1,
+      "cash": 19.62,
+      "gmv": 10.9,
+      "refund_exposure": 0.0,
+      "average_order_value": 19.62,
+      "freight_ratio_pct": 80.0,
+      "refund_exposure_pct": 0.0,
+      "active_customers": 1
+    },
+    {
+      "purchase_month": "2017-01-01",
+      "orders": 800,
+      "cash": 138488.04,
+      "gmv": 120312.87,
+      "refund_exposure": 1481.28,
+      "average_order_value": 173.11,
+      "freight_ratio_pct": 14.03,
+      "refund_exposure_pct": 1.07,
+      "active_customers": 765
+    },
+    {
+      "purchase_month": "2017-02-01",
+      "orders": 1780,
+      "cash": 291908.01,
+      "gmv": 247303.02,
+      "refund_exposure": 8286.07,
+      "average_order_value": 163.99,
+      "freight_ratio_pct": 15.76,
+      "refund_exposure_pct": 2.839,
+      "active_customers": 1755
+    },
+    {
+      "purchase_month": "2017-03-01",
+      "orders": 2682,
+      "cash": 449863.6,
+      "gmv": 374344.3,
+      "refund_exposure": 24207.2,
+      "average_order_value": 167.73,
+      "freight_ratio_pct": 15.41,
+      "refund_exposure_pct": 5.381,
+      "active_customers": 2642
+    },
+    {
+      "purchase_month": "2017-04-01",
+      "orders": 2404,
+      "cash": 417788.03,
+      "gmv": 359927.23,
+      "refund_exposure": 11799.65,
+      "average_order_value": 173.79,
+      "freight_ratio_pct": 14.58,
+      "refund_exposure_pct": 2.824,
+      "active_customers": 2372
+    },
+    {
+      "purchase_month": "2017-05-01",
+      "orders": 3700,
+      "cash": 592918.82,
+      "gmv": 506071.14,
+      "refund_exposure": 9992.66,
+      "average_order_value": 160.25,
+      "freight_ratio_pct": 15.83,
+      "refund_exposure_pct": 1.685,
+      "active_customers": 3625
+    },
+    {
+      "purchase_month": "2017-06-01",
+      "orders": 3245,
+      "cash": 511276.38,
+      "gmv": 433038.6,
+      "refund_exposure": 11448.91,
+      "average_order_value": 157.56,
+      "freight_ratio_pct": 16.15,
+      "refund_exposure_pct": 2.239,
+      "active_customers": 3180
+    },
+    {
+      "purchase_month": "2017-07-01",
+      "orders": 4026,
+      "cash": 592382.92,
+      "gmv": 498031.48,
+      "refund_exposure": 13524.34,
+      "average_order_value": 147.14,
+      "freight_ratio_pct": 17.46,
+      "refund_exposure_pct": 2.283,
+      "active_customers": 3947
+    },
+    {
+      "purchase_month": "2017-08-01",
+      "orders": 4331,
+      "cash": 674396.32,
+      "gmv": 573971.68,
+      "refund_exposure": 12324.55,
+      "average_order_value": 155.71,
+      "freight_ratio_pct": 16.43,
+      "refund_exposure_pct": 1.827,
+      "active_customers": 4246
+    },
+    {
+      "purchase_month": "2017-09-01",
+      "orders": 4285,
+      "cash": 727762.45,
+      "gmv": 624401.69,
+      "refund_exposure": 10567.23,
+      "average_order_value": 169.84,
+      "freight_ratio_pct": 15.37,
+      "refund_exposure_pct": 1.452,
+      "active_customers": 4212
+    },
+    {
+      "purchase_month": "2017-10-01",
+      "orders": 4631,
+      "cash": 779677.88,
+      "gmv": 664219.43,
+      "refund_exposure": 14892.6,
+      "average_order_value": 168.36,
+      "freight_ratio_pct": 15.84,
+      "refund_exposure_pct": 1.91,
+      "active_customers": 4561
+    },
+    {
+      "purchase_month": "2017-11-01",
+      "orders": 7544,
+      "cash": 1194882.8,
+      "gmv": 1010271.37,
+      "refund_exposure": 22243.57,
+      "average_order_value": 158.39,
+      "freight_ratio_pct": 16.83,
+      "refund_exposure_pct": 1.862,
+      "active_customers": 7430
+    },
+    {
+      "purchase_month": "2017-12-01",
+      "orders": 5673,
+      "cash": 878401.48,
+      "gmv": 743914.17,
+      "refund_exposure": 16487.02,
+      "average_order_value": 154.84,
+      "freight_ratio_pct": 16.19,
+      "refund_exposure_pct": 1.877,
+      "active_customers": 5603
+    },
+    {
+      "purchase_month": "2018-01-01",
+      "orders": 7269,
+      "cash": 1115004.18,
+      "gmv": 950030.36,
+      "refund_exposure": 12364.77,
+      "average_order_value": 153.39,
+      "freight_ratio_pct": 16.61,
+      "refund_exposure_pct": 1.109,
+      "active_customers": 7166
+    },
+    {
+      "purchase_month": "2018-02-01",
+      "orders": 6728,
+      "cash": 992463.34,
+      "gmv": 844178.71,
+      "refund_exposure": 12497.11,
+      "average_order_value": 147.51,
+      "freight_ratio_pct": 16.99,
+      "refund_exposure_pct": 1.259,
+      "active_customers": 6569
+    },
+    {
+      "purchase_month": "2018-03-01",
+      "orders": 7211,
+      "cash": 1159652.12,
+      "gmv": 983213.44,
+      "refund_exposure": 6915.38,
+      "average_order_value": 160.82,
+      "freight_ratio_pct": 17.5,
+      "refund_exposure_pct": 0.596,
+      "active_customers": 7115
+    },
+    {
+      "purchase_month": "2018-04-01",
+      "orders": 6939,
+      "cash": 1160785.48,
+      "gmv": 996647.75,
+      "refund_exposure": 4481.57,
+      "average_order_value": 167.28,
+      "freight_ratio_pct": 16.4,
+      "refund_exposure_pct": 0.386,
+      "active_customers": 6882
+    },
+    {
+      "purchase_month": "2018-05-01",
+      "orders": 6873,
+      "cash": 1153982.15,
+      "gmv": 996517.68,
+      "refund_exposure": 8233.52,
+      "average_order_value": 167.9,
+      "freight_ratio_pct": 15.43,
+      "refund_exposure_pct": 0.713,
+      "active_customers": 6814
+    },
+    {
+      "purchase_month": "2018-06-01",
+      "orders": 6167,
+      "cash": 1023880.5,
+      "gmv": 865124.31,
+      "refund_exposure": 3386.21,
+      "average_order_value": 166.03,
+      "freight_ratio_pct": 18.24,
+      "refund_exposure_pct": 0.331,
+      "active_customers": 6128
+    },
+    {
+      "purchase_month": "2018-07-01",
+      "orders": 6292,
+      "cash": 1066540.75,
+      "gmv": 895507.22,
+      "refund_exposure": 26660.59,
+      "average_order_value": 169.51,
+      "freight_ratio_pct": 18.23,
+      "refund_exposure_pct": 2.5,
+      "active_customers": 6230
+    },
+    {
+      "purchase_month": "2018-08-01",
+      "orders": 6512,
+      "cash": 1022425.32,
+      "gmv": 854686.33,
+      "refund_exposure": 25529.17,
+      "average_order_value": 157.01,
+      "freight_ratio_pct": 17.4,
+      "refund_exposure_pct": 2.497,
+      "active_customers": 6460
+    },
+    {
+      "purchase_month": "2018-09-01",
+      "orders": 16,
+      "cash": 4439.54,
+      "gmv": 145.0,
+      "refund_exposure": 4273.08,
+      "average_order_value": 277.47,
+      "freight_ratio_pct": 14.8,
+      "refund_exposure_pct": 96.251,
+      "active_customers": 14
+    },
+    {
+      "purchase_month": "2018-10-01",
+      "orders": 4,
+      "cash": 589.67,
+      "gmv": 0.0,
+      "refund_exposure": 589.67,
+      "average_order_value": 147.42,
+      "freight_ratio_pct": NaN,
+      "refund_exposure_pct": 100.0,
+      "active_customers": 4
+    }
+  ]
+}

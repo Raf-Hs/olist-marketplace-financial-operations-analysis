@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartBreakType",
+  "position": {
+    "x": 20,
+    "y": 545,
+    "z": 16,
+    "height": 300,
+    "width": 780,
+    "tabOrder": 16
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Gross Break Value"
+                }
+              },
+              "Property": "Gross Break Value",
+              "Name": "FactOrder.Gross Break Value"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "StatusClass"
+                }
+              },
+              "Property": "StatusClass",
+              "Name": "FactOrder.StatusClass"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Gross Break Value"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "FactOrder.StatusClass"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Reconciliation break value by status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

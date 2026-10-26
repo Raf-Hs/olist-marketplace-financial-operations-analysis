@@ -1,0 +1,12 @@
+# Olist Marketplace - Financial Operations & Revenue Analytics
+# Python 3.12+ (tested on 3.12.10, Windows 11)
+
+pandas==3.1.0
+numpy==2.5.4
+matplotlib==3.11.2
+openpyxl==3.1.5
+pytest==9.1.1
+
+# Optional, only needed to compile the Power BI template:
+#   python powerbi/build_pbit.py --download-tools
+# pbi-tools is a .NET CLI, installed separately - see powerbi/README.md

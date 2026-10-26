@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "chartDispute",
+  "position": {
+    "x": 20,
+    "y": 555,
+    "z": 16,
+    "height": 290,
+    "width": 780,
+    "tabOrder": 16
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "Dispute Rate"
+                }
+              },
+              "Property": "Dispute Rate",
+              "Name": "FactOrder.Dispute Rate"
+            }
+          ]
+        },
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactOrder"
+                    }
+                  },
+                  "Property": "MaxInstallments"
+                }
+              },
+              "Property": "MaxInstallments",
+              "Name": "FactOrder.MaxInstallments"
+            }
+          ]
+        }
+      }
+    },
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "FactOrder.Dispute Rate"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "FactOrder.MaxInstallments"
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dispute rate by instalment depth (score 1 or 2 out of 5)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
